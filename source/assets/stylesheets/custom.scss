@@ -1,0 +1,25 @@
+.background-image {
+  background-image: image-url("banner.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  @include media-breakpoint-up(xs) {
+    height: 160px;
+  }
+  @include media-breakpoint-up(sm) {
+    height: 200px;
+  }
+  @include media-breakpoint-up(md) {
+    height: 285px;
+  }
+}
+
+.display-4 {
+  @include media-breakpoint-up(xs) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 2.5rem;
+  }
+}

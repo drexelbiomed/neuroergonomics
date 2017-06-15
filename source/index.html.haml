@@ -1,53 +1,29 @@
--@title= 'Middleman Starter Kit'
+-@title= 'Neuroergonomics 2018 – Conference'
 -@page_classes= 'home'
 
+.container-fluid
+  .row
+    .col-12
+      .background-image
 .container
   .row
-    .col-12.mt-50
-      .jumbotron.text-center
-        %i.fa.fa-fort-awesome.fa-4x.text-muted
-        %h1
-          Middleman v4 Front-end Starter Kit
-    .col-6.mt-50
+    .col-12
+      .jumbotron
+        %h1.display-4
+          2nd International Neuroergonomics Conference
+        %p.lead
+          June 29 & 30, 2018
+          %br
+          <strong>Drexel University</strong> / Philadelphia, PA, USA
+        %hr.my-4
+        %p
+          Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of high-value and exciting presentations from the community’s world-leading scientists on the cutting edge of exciting new areas of Neuroergonomics research.
+  .row
+    .col-12
       .card
         .card-header
-          Introduction
-        .card-block      
-          %p.card-text 
-            :markdown
-              Middleman v4 starter kit template created for middleman front-end development.
-              If you wonder about middleman please [check out here](https://middlemanapp.com/)
-
-              ### Quick start
-              `middleman init your_project_name --template=middleman-starter-kit`
-
-              More information is [here](https://middlemanapp.com/advanced/project_templates/)
-
-              ### What's Include
-              Middleman start kit template basically build on HTML5 Boilerplate front-end
-              template. Ready to use Rails assets file structure, Sass file structure.
-
-              - Middleman v4
-              - Haml v5
-              - ERb
-              - Sass
-              - jQuery
-              - Bootstrap v4
-              - Font Awesome (CDN)
-              - Editor Config
-              - Simple sitemap helper
-              - humans.txt
-              - Open graph meta tags
-              - Middleman Deploy
-              - ERb simple page 
-    .col-6.mt-50
-      .card
-        .card-header
-          Sitemap
+          Newsletter Signup
         .card-block
-          %p.card-text 
-            %ul.list-group
-              - sitemap.resources.each do |page|
-                - if page.url =~ /\.html/
-                  %li.list-group-item
-                    = link_to page.url, page.url
+          .embed-responsive.embed-responsive-21by9
+            %iframe.embed-responsive-item{ :src => "https://drexel.qualtrics.com/jfe/form/SV_cD9xz2w499vlPGR" }
+

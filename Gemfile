@@ -28,3 +28,4 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Tether
 gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
 
+gem "middleman-blog", "~> 4.0"

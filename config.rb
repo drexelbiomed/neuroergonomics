@@ -80,14 +80,13 @@ configure :build do
   activate :relative_assets
 
   # Middleman Deploy (https://github.com/middleman-contrib/middleman-deploy/)
-  #activate :deploy do |deploy|
-  #  deploy.deploy_method = :git
-  #  Optional Settings
-  #  deploy.remote   = '.....' # remote name or git url, default: origin
-  #  deploy.branch   = 'gh-pages' # default: gh-pages
-  #  deploy.strategy = :submodule # commit strategy: can be :force_push or :submodule, default: :force_push
-  #  deploy.commit_message = 'custom-message' # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-  #end
+  activate :deploy do |deploy|
+    deploy.deploy_method   = :ftp
+    deploy.host            = data.ftp.host
+    deploy.path            = data.ftp.path
+    deploy.user            = data.ftp.user
+    deploy.password        = data.ftp.pass
+  end
 
 end
 

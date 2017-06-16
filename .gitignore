@@ -1,2 +1,6 @@
+# Ignore these directories
 data/*
+build/*
+
+# Ignore these files
 *.psd

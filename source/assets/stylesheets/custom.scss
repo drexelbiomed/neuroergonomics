@@ -11,7 +11,16 @@
     height: 200px;
   }
   @include media-breakpoint-up(md) {
+    height: 200px;
+    background-size: contain;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 220px;
+    background-size: contain;
+  }
+  @include media-breakpoint-up(xl) {
     height: 285px;
+    background-size: contain;
   }
 }
 

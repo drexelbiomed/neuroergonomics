@@ -20,6 +20,12 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
+require 'yaml'
+
+def data
+  cnf = YAML::load(File.open('data/ftp.yml'))
+end
+
 ###
 # Environment List
 ###
@@ -79,13 +85,16 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  ignore "*.psd"
+
   # Middleman Deploy (https://github.com/middleman-contrib/middleman-deploy/)
   activate :deploy do |deploy|
     deploy.deploy_method   = :ftp
-    deploy.host            = data.ftp.host
-    deploy.path            = data.ftp.path
-    deploy.user            = data.ftp.user
-    deploy.password        = data.ftp.pass
+    deploy.host            = data["host"]
+    deploy.path            = data["path"]
+    deploy.user            = data["user"]
+    deploy.password        = data["pass"]
+    deploy.build_before = true
   end
 
 end

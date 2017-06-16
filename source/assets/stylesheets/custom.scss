@@ -1,20 +1,23 @@
 .background-image {
-  background-image: image-url("banner.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 
   @include media-breakpoint-up(xs) {
-    height: 160px;
+    background-image: image-url("banner-sm.png");
+    height: 240px;
   }
   @include media-breakpoint-up(sm) {
-    height: 200px;
+    height: 280px;
+    background-size: contain;
   }
   @include media-breakpoint-up(md) {
-    height: 200px;
+    background-image: image-url("banner-md.png");
+    height: 276px;
     background-size: contain;
   }
   @include media-breakpoint-up(lg) {
+    background-image: image-url("banner.png");
     height: 220px;
     background-size: contain;
   }

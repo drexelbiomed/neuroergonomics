@@ -1,23 +1,23 @@
 .background-image {
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
 
   @include media-breakpoint-up(xs) {
     background-image: image-url("banner-sm.png");
     height: 240px;
+    background-size: contain;
   }
   @include media-breakpoint-up(sm) {
+    background-image: image-url("banner-md.png");
     height: 280px;
     background-size: contain;
   }
   @include media-breakpoint-up(md) {
-    background-image: image-url("banner-md.png");
     height: 276px;
     background-size: contain;
   }
   @include media-breakpoint-up(lg) {
-    background-image: image-url("banner.png");
+    background-image: image-url("banner-lg.png");
     height: 220px;
     background-size: contain;
   }
@@ -27,11 +27,36 @@
   }
 }
 
-.display-4 {
-  @include media-breakpoint-up(xs) {
-    font-size: 2rem;
+.jumbotron {
+  background-color: #ffffff;
+
+  .display-4 {
+    color: #ef0f44;
+
+    @include media-breakpoint-up(xs) {
+      font-size: 2rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 2.5rem;
+    }
   }
-  @include media-breakpoint-up(md) {
-    font-size: 2.5rem;
+
+  p {
+    em {
+      border: 1px solid #ef0f44;
+      padding: 5px;
+      color: #23437c;
+    }
+  }
+
+  p.lead {
+    color: #23437c;
+  }
+}
+
+.card {
+  .card-header {
+    background-color: #006699;
+    color: #ffffff;
   }
 }

@@ -7,26 +7,104 @@
       .background-image
 .container
   .row
-    .col-lg-6
-      .jumbotron
-        %p
-          %em Save the Date
-        %h1.display-4
-          2nd International Neuroergonomics Conference
-        %p.lead
-          June 27 &mdash; 29, 2018
-          %br
-          <strong>Drexel University</strong> / Philadelphia, PA - USA
-        %hr.my-4
-        %p
-          Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of high-value and exciting presentations from the community’s world-leading scientists on the cutting edge of exciting new areas of Neuroergonomics research.
-    .col-lg-6
+    .col-lg-8
+      %br
+      .card
+        .card-body
+          %h1.display-4.text-center
+            2nd International <br>Neuroergonomics Conference
+          %p.lead.text-center
+            June 27 &mdash; 29, 2018
+            %br
+            <strong>Drexel University</strong> / Philadelphia, PA - USA
+          %hr.my-4
+          %p
+            Dear Partners, Colleagues and Friends,
+          %p
+            %strong
+              The 2nd International Conference of Neuroergonomics will be held on
+              %span.red June 27-29, 2018
+            %strong, at Drexel University, in Philadelphia, PA, USA.
+            Neuroergonomics has witnessed extensive growth since its development a decade ago with the understanding of the brain at work and in everyday life. Following the success of the inaugural Neuroergonomics conference in Paris, the time is right to take stock of the achievements of neuroergonomics research, discuss key questions and develop new ideas for the future. This is the purpose of the Neuroergonomics 2018 Conference.
+          %p
+            In memorandum of
+            %strong Prof. Raja Parasuraman
+            (founder of neuroergonomics) there will be two
+            %strong Parasuraman prizes
+            to reward the best student paper and the best senior paper. Moreover, the best abstracts will be pre-selected for an extended version to be published in a special issue.
+          %p
+            All information (venue, program, abstract submission and registration) will be available at:
+            =link_to "www.neuroergonomicsconference.org", "http://www.neuroergonomicsconference.org"
+          %p
+            Sincerely,
+          %p
+            On behalf of Neuroergonomics 2018 Committees
+          %hr.my-4
+          .card-columns
+            .card
+              .card-body
+                %p Hasan Ayaz
+                %p.card-text
+                  %small
+                    School of Biomedical Engineering, Science and Health Systems,
+                    %br
+                    Drexel University, Philadelphia, PA, USA
+                %br
+            .card
+              .card-body
+                %p Frederic Dehais
+                %p.card-text
+                  %small
+                    Institut Supérieur de l'Aéronautique et de l'Espace,
+                    %br
+                    Université Fédérale de Toulouse, France
+                %br
+            .card
+              .card-body
+                %p Carryl Baldwin
+                %p.card-text
+                  %small
+                    Human Factors and Applied Cognition program,
+                    %br
+                    George Mason University, Fairfax, VA USA
+                %br
+            .card
+              .card-body
+                %p Daniel Callan
+                %p.card-text
+                  %small
+                    Center for Information and Neural Networks,
+                    %br
+                    National Institute of Information and Communications Technology, Osaka University, Japan
+                %br
+            .card
+              .card-body
+                %p Lewis Chuang
+                %p.card-text
+                  %small
+                    Max Planck Institute for Biological Cybernetics, Tubingen, Germany
+                %br
+
+      %br
+    .col-lg-4
+      %br
+      .card
+        =image_tag "philadelphia-skyline.png", class: "img-fluid card-img-top", alt: "Philadelphia Skyline South Street Bridge"
+        .card-body
+          %p
+            %strong Philadelphia Skyline
+          %p
+            As one of the country's first major cities, Philadelphia has long been a city of innovation. Look forward to seeing you in Philadelphia.
+      %br
+
       .card
         .card-header
           Email Newsletter Signup
-        .card-block
+        .card-body
           %p
-            %em Sign up to be notified about call for proposals and other event and travel information.
-          .embed-responsive.embed-responsive-1by1
+            Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of high-value and exciting presentations from the community’s world-leading scientists on the cutting edge of exciting new areas of Neuroergonomics research.
+          %p
+            Sign up to be notified about call for proposals and other event and travel information.
+          .embed-responsive.embed-responsive-4by3
             %iframe.embed-responsive-item{ :src => "https://drexel.qualtrics.com/jfe/form/SV_cD9xz2w499vlPGR" }
 

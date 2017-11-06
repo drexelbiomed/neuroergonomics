@@ -27,31 +27,27 @@
   }
 }
 
-.jumbotron {
-  background-color: #ffffff;
+.display-4 {
+  color: #ef0f44;
 
-  .display-4 {
-    color: #ef0f44;
-
-    @include media-breakpoint-up(xs) {
-      font-size: 2rem;
-    }
-    @include media-breakpoint-up(md) {
-      font-size: 2.5rem;
-    }
+  @include media-breakpoint-up(xs) {
+    font-size: 2rem;
   }
-
-  p {
-    em {
-      border: 1px solid #ef0f44;
-      padding: 5px;
-      color: #23437c;
-    }
+  @include media-breakpoint-up(md) {
+    font-size: 2.5rem;
   }
+}
 
-  p.lead {
+p {
+  em {
+    border: 1px solid #ef0f44;
+    padding: 5px;
     color: #23437c;
   }
+}
+
+p.lead, p strong {
+  color: #23437c;
 }
 
 .card {
@@ -59,4 +55,17 @@
     background-color: #006699;
     color: #ffffff;
   }
+}
+
+span.red {
+  color: #ef0f44;
+}
+
+.card-columns {
+    .card {
+      border: 0;
+      .card-body {
+        padding: 0rem
+      }
+    }
 }

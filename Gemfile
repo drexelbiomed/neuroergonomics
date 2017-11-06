@@ -25,7 +25,7 @@ gem "middleman-blog", "~> 4.0"
 # Frameworks/Library
 ###############################
 # Bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.beta'
 
 # Tether
 gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'

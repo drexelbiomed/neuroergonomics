@@ -46,11 +46,27 @@ p {
   }
 }
 
+.display-4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: #333;
+    background-image: image-url("congruent_outline.png");
+    color: #eee;
+    padding: 0 .5em .125em;
+  }
+  margin: 1rem 0;
+}
+
 p.lead, p strong {
   color: #23437c;
 }
 
 .card {
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border: 1px solid #fff;
   .card-header {
     background-color: #006699;
     color: #ffffff;
@@ -63,6 +79,7 @@ span.red {
 
 .card-columns {
     .card {
+      box-shadow: none;
       border: 0;
       .card-body {
         padding: 0rem

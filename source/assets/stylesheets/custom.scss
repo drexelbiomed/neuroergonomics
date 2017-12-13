@@ -27,17 +27,6 @@
   }
 }
 
-.display-4 {
-  color: #ef0f44;
-
-  @include media-breakpoint-up(xs) {
-    font-size: 2rem;
-  }
-  @include media-breakpoint-up(md) {
-    font-size: 2.5rem;
-  }
-}
-
 p {
   em {
     border: 1px solid #ef0f44;
@@ -48,14 +37,23 @@ p {
 
 .display-4 {
     font-weight: bold;
-    font-size: 2.5rem;
+    color: #ef0f44;
   span {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     background-color: #333;
     background-image: image-url("congruent_outline.png");
     color: #eee;
     padding: 0 .5em .125em;
+  }
+  @include media-breakpoint-up(xs) {
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
   }
   margin: 1rem 0;
 }

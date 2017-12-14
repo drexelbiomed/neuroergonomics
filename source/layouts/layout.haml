@@ -44,16 +44,20 @@
       .row
         .col-12
           = partial 'partials/header'
-
-    .container
+    .container-fluid.position-absolute
+      .row.green-grey
+        .col-12
+          .container
+            .row
+              .col-12
+                = partial 'partials/nav/breadcrumbs'
+    .container.main
       .row
         .col-lg-8
-          %br
           .card
             .card-body
               = yield
         .col-lg-4
-          %br
           = partial 'partials/sidebar'
 
     .container-fluid

@@ -5,26 +5,30 @@
   @include media-breakpoint-up(xs) {
     background-image: image-url("banner-sm.png");
     height: 240px;
-    background-size: contain;
+    background-size: cover;
   }
   @include media-breakpoint-up(sm) {
     background-image: image-url("banner-md.png");
     height: 280px;
-    background-size: contain;
+    background-size: cover;
   }
   @include media-breakpoint-up(md) {
     height: 276px;
-    background-size: contain;
+    background-size: cover;
   }
   @include media-breakpoint-up(lg) {
     background-image: image-url("banner-lg.png");
     height: 220px;
-    background-size: contain;
+    background-size: cover;
   }
   @include media-breakpoint-up(xl) {
     height: 285px;
-    background-size: contain;
+    background-size: cover;
   }
+}
+
+.main {
+  margin-top: 3em;
 }
 
 p {
@@ -35,8 +39,32 @@ p {
   }
 }
 
-.card-header {
+// Nav
+.green-grey {
+  background-color: #778d9c;
+}
 
+.position-absolute {
+  position: absolute;
+}
+
+ol.breadcrumb {
+  background: none;
+    li.breadcrumb-item {
+      a {
+        color: #fff;
+        &:hover {
+          color: #fff;
+        }
+      }
+      &.active {
+        color: #fff;
+      }
+    }
+    .breadcrumb-item + ::before {
+      color: #b4bec9;
+      content: "»"
+    }
 }
 
 h1.h1, h2.h2, h3.h3, h4.h4 {

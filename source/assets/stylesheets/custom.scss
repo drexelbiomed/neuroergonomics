@@ -11,16 +11,13 @@ body {
 }
 
 .navbar-container {
-  margin-top: 200px;
+  margin-top: 245px;
 }
 
 .breadcrumb-container {
   position: absolute;
 }
 
-.main {
-  top: 240px;
-}
 
 // Banner
 
@@ -30,17 +27,13 @@ body {
 
   @include media-breakpoint-up(xs) {
     background-image: image-url("banner-sm.png");
-    height: 240px;
+    height: 285px;
     background-size: contain;
   }
   @include media-breakpoint-up(sm) {
-    background-image: image-url("banner-lg.png");
+    background-image: image-url("banner.png");
     // height: 220px;
-    background-size: contain;
-  }
-  @include media-breakpoint-up(xl) {
-    // height: 285px;
-    background-size: contain;
+    background-size: 1059px 286px middle center;
   }
 }
 

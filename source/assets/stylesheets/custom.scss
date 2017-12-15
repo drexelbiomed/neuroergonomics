@@ -1,3 +1,29 @@
+// Body bg color
+body {
+  background: #DCDCDC;
+}
+
+// Scaffolding
+
+.banner-container {
+  position: absolute;
+  top: 0px;
+}
+
+.navbar-container {
+  margin-top: 200px;
+}
+
+.breadcrumb-container {
+  position: absolute;
+}
+
+.main {
+  top: 240px;
+}
+
+// Banner
+
 .background-image {
   background-repeat: no-repeat;
   background-position: top center;
@@ -5,25 +31,16 @@
   @include media-breakpoint-up(xs) {
     background-image: image-url("banner-sm.png");
     height: 240px;
-    background-size: cover;
+    background-size: contain;
   }
   @include media-breakpoint-up(sm) {
-    background-image: image-url("banner-md.png");
-    height: 280px;
-    background-size: cover;
-  }
-  @include media-breakpoint-up(md) {
-    height: 276px;
-    background-size: cover;
-  }
-  @include media-breakpoint-up(lg) {
     background-image: image-url("banner-lg.png");
-    height: 220px;
-    background-size: cover;
+    // height: 220px;
+    background-size: contain;
   }
   @include media-breakpoint-up(xl) {
-    height: 285px;
-    background-size: cover;
+    // height: 285px;
+    background-size: contain;
   }
 }
 
@@ -40,8 +57,43 @@ p {
 }
 
 // Nav
+
+.nav-tabs {
+  border: none;
+  a.nav-link {
+    background: #333333;
+    color: #fefefe;
+    border: none;
+    margin-left: 5px;
+  }
+  a.nav-link.active {
+    color: #fefefe;
+    background-color: #778d9c;
+    border: none;
+  }
+}
+
+.nav-item.dropdown.show {
+  border: none;
+  a.nav-link.dropdown-toggle {
+    color: #fefefe;
+    background-color: #778d9c;
+  }
+
+  .dropdown-menu.show {
+    border: none;
+    background: #333333;
+    a.dropdown-item {
+      background: #333333;
+      color: #fefefe;
+      &:hover { background: #666666 }
+    }
+  }
+}
+
 .green-grey {
   background-color: #778d9c;
+  padding-bottom: 3em;
 }
 
 .position-absolute {
@@ -49,6 +101,7 @@ p {
 }
 
 ol.breadcrumb {
+  border: none;
   background: none;
     li.breadcrumb-item {
       a {
@@ -67,6 +120,8 @@ ol.breadcrumb {
     }
 }
 
+// Headings
+
 h1.h1, h2.h2, h3.h3, h4.h4 {
   font-weight: bold;
   color: #ef0f44;
@@ -75,18 +130,22 @@ h1.h1, h2.h2, h3.h3, h4.h4 {
     font-weight: bold;
     background-color: #333;
     background-image: image-url("congruent_outline.png");
-    color: #eee;
+    color: #efefef;
     padding: 0 .25em .125em;
   }
 }
+
+// Lead text
 
 p.lead, p strong {
   color: #23437c;
 }
 
+// Cards
+
 .card {
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  border: 1px solid #fff;
+  border: none;
   .card-header {
     background-color: #006699;
     color: #ffffff;
@@ -94,6 +153,7 @@ p.lead, p strong {
   }
 }
 
+// Fuschia
 span.red {
   color: #ef0f44;
 }

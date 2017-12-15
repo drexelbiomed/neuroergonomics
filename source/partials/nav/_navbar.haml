@@ -1,0 +1,59 @@
+%ul.nav.nav-tabs.justify-content-end{:role => "presentation"}
+  %li.nav-item.dropdown
+    - if current_resource.data.category == "Home"
+      %a.nav-link.dropdown-toggle.active{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
+        Neuroergonomics 2018
+    - elsif current_resource.data.category != "Home"
+      %a.nav-link.dropdown-toggle{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
+        Neuroergonomics 2018
+    .dropdown-menu
+      - sitemap.resources.group_by { |f| f.data["category"] }["Home"].reverse.each do |p|
+        = link_to p.data.title, p.url, class: 'dropdown-item', relative: true
+
+
+  - if current_resource.data.category == "Registration"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Registration"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Registration"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Registration"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Registration"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Registration"][0].url, relative: true, class: "nav-link"
+
+
+  - if current_resource.data.category == "Submission"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Submission"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Submission"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Submission"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Submission"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Submission"][0].url, relative: true, class: "nav-link"
+
+
+  - if current_resource.data.category == "Program"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Program"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Program"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Program"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Program"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Program"][0].url, relative: true, class: "nav-link"
+
+
+  - if current_resource.data.category == "Sponsors"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Sponsors"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Sponsors"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Sponsors"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Sponsors"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Sponsors"][0].url, relative: true, class: "nav-link"
+
+
+  - if current_resource.data.category == "Venue"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Venue"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Venue"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Venue"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Venue"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Venue"][0].url, relative: true, class: "nav-link"
+
+
+  - if current_resource.data.category == "Contact"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Contact"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Contact"][0].url, relative: true, class: "nav-link active"
+  - if current_resource.data.category != "Contact"
+    %li.nav-item
+      = link_to sitemap.resources.group_by { |f| f.data["category"] }["Contact"][0].data.title, sitemap.resources.group_by { |f| f.data["category"] }["Contact"][0].url, relative: true, class: "nav-link"

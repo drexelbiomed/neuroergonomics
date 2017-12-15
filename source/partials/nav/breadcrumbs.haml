@@ -1,8 +1,13 @@
 %nav{"aria-label" => "breadcrumb", role: "navigation"}
   %ol.breadcrumb
-    %li.breadcrumb-item
-      = link_to "Page Title", "#"
-    %li.breadcrumb-item
-      = link_to "Page Title", "#"
-    %li.breadcrumb-item.active{"aria-current" => "page"}
-      Page Title
+    %li.breadcrumb-item.active
+      You are here
+    - if current_resource.parent.blank?
+      %li.breadcrumb-item.active
+        Neuroergonomics Conference 2018
+
+    - elsif current_resource.parent.present?
+      %li.breadcrumb-item
+        = link_to "Neuroergonomics Conference 2018", "/", relative: true
+      %li.breadcrumb-item.active
+        = current_resource.data.title

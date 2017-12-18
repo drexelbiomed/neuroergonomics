@@ -25,15 +25,10 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
 
-  @include media-breakpoint-up(xs) {
-    background-image: image-url("banner-sm.png");
-    height: 285px;
-    background-size: contain;
-  }
-  @include media-breakpoint-up(sm) {
-    background-image: image-url("banner.png");
-    // height: 220px;
-    background-size: 1059px 286px middle center;
+  img {
+    position: absolute;
+    left: 50%;
+    margin-left: -560px;
   }
 }
 
@@ -50,36 +45,53 @@ p {
 }
 
 // Nav
-
-.nav-tabs {
-  border: none;
-  a.nav-link {
-    background: #333333;
-    color: #fefefe;
+.navbar-dark .navbar-nav .nav-link {
+    background: transparent;
     border: none;
-    margin-left: 5px;
-  }
-  a.nav-link.active {
-    color: #fefefe;
-    background-color: #778d9c;
-    border: none;
-  }
+    &.active {
+      background: transparent;
+      border: none;
+    }
 }
 
-.nav-item.dropdown.show {
-  border: none;
-  a.nav-link.dropdown-toggle {
-    color: #fefefe;
-    background-color: #778d9c;
+
+@include media-breakpoint-up(lg) {
+  .navbar {
+    background-color: transparent !important;
+    border: none;
+    padding: 0 1rem;
   }
 
-  .dropdown-menu.show {
+  .navbar-dark .nav-tabs {
     border: none;
-    background: #333333;
-    a.dropdown-item {
+    a.nav-link {
       background: #333333;
       color: #fefefe;
-      &:hover { background: #666666 }
+      border: none;
+      margin-left: 5px;
+    }
+    a.nav-link.active {
+      color: #fefefe;
+      background-color: #778d9c;
+      border: none;
+    }
+
+    .nav-item.dropdown.show {
+      border: none;
+      a.nav-link.dropdown-toggle {
+        color: #fefefe;
+        background-color: #778d9c;
+      }
+
+      .dropdown-menu.show {
+        border: none;
+        background: #333333;
+        a.dropdown-item {
+          background: #333333;
+          color: #fefefe;
+          &:hover { background: #666666 }
+        }
+      }
     }
   }
 }
@@ -97,6 +109,7 @@ ol.breadcrumb {
   border: none;
   background: none;
     li.breadcrumb-item {
+      font-size: .75rem;
       a {
         color: #fff;
         &:hover {

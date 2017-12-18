@@ -4,31 +4,76 @@ body {
 }
 
 // Scaffolding
-
 .banner-container {
   position: absolute;
   top: 0px;
+  height: 285px;
+  .background-image {
+    img {
+      position: relative;
+      bottom: 0px;
+    }
+  }
 }
 
 .navbar-container {
-  margin-top: 245px;
+  margin-top: 229px;
 }
 
 .breadcrumb-container {
   position: absolute;
 }
 
+@include media-breakpoint-down(md) {
+  .banner-container {
+    top: -16px;
+    padding: 0;
+    .background-image {
+      height: 301px;
+      background-image: image-url('banner-mobile.png');
+      background-size: contain;
+      padding-top: 2rem;
+      color: #fff;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+      span {
+        background-color: #ef0f44;
+        padding: 0 .325rem;
+      }
+      h1, h2 {
+        font-size: 24px;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+  }
+  h1.h1 {
+    font-size: 1.5rem;
+  }
+}
 
-// Banner
-
-.background-image {
-  background-repeat: no-repeat;
-  background-position: top center;
-
-  img {
-    position: absolute;
-    left: 50%;
-    margin-left: -560px;
+// Banner Desktop
+@include media-breakpoint-up(lg) {
+  .banner-container {
+    .background-image {
+      background-repeat: no-repeat;
+      background-position: top center;
+      img {
+        position: relative;
+        bottom: 0px;
+        left: 50%;
+        margin-left: -560px;
+      }
+    }
+  }
+  .navbar-container {
+    margin-top: 245px;
   }
 }
 
@@ -51,9 +96,15 @@ p {
     &.active {
       background: transparent;
       border: none;
+      background-color: #343a40;
     }
 }
 
+.nav-tabs { border: none;}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  background-color: #343a40 !important;
+}
 
 @include media-breakpoint-up(lg) {
   .navbar {
@@ -105,25 +156,34 @@ p {
   position: absolute;
 }
 
+@include media-breakpoint-down(xs) {
+  ol.breadcrumb {
+    padding: .75rem 0rem;
+  }
+}
+
 ol.breadcrumb {
   border: none;
   background: none;
-    li.breadcrumb-item {
-      font-size: .75rem;
-      a {
-        color: #fff;
-        &:hover {
-          color: #fff;
-        }
-      }
-      &.active {
+  margin-left: -12px;
+  li.breadcrumb-item {
+    font-size: .75rem;
+    a {
+      color: #fff;
+      &:hover {
         color: #fff;
       }
     }
-    .breadcrumb-item + ::before {
-      color: #b4bec9;
-      content: "»"
+    &.active {
+      color: #fff;
     }
+  }
+  .breadcrumb-item + ::before {
+    color: #b4bec9;
+    content: "»";
+    padding-left: .25rem;
+    padding-right: 0rem;
+  }
 }
 
 // Headings

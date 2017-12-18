@@ -103,7 +103,7 @@ p {
 .nav-tabs { border: none;}
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  background-color: #343a40 !important;
+  background-color: #343a40;
 }
 
 @include media-breakpoint-up(lg) {

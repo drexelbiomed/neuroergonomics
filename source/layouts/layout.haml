@@ -24,11 +24,14 @@
     // twitter card data
     %meta{content:'summary', name:'twitter:card'}
     %meta{content:'@drexelbiomed', name:'twitter:site'}
-    %meta{content:'Your Awesome Title', name:'twitter:title'}
-    %meta{content:'Your Description', name: 'twitter:description'}
+    %meta{content:'Neuroergonomics Conference 2018 – Philadelphia', name:'twitter:title'}
+    %meta{content:'Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of Neuroergonomics presentations', name: 'twitter:description'}
     %meta{content: '@drexelbiomed', name: 'twitter:creator'}
 
     %link{type:'text/plain', rel:'author', href:'/humans.txt'}
+
+    - if build?
+      = partial 'partials/ga'
 
     // favicons
     %link{rel:'icon', href:'favicon.png'}

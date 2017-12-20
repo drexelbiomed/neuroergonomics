@@ -8,13 +8,35 @@ body {
   position: absolute;
   top: 0px;
   height: 285px;
-  .background-image {
+  .img-banner {
+    position: relative;
     img {
-      position: relative;
       bottom: 0px;
     }
   }
+  .text-banner {
+    position: relative;
+    top: 2rem;
+  }
+  .text-logo {
+    position: relative;
+    z-index: -1;
+    top: 2rem;
+    img.brain-watermark {
+      position: relative;
+      top: initial;
+    }
+  }
+  .background-image {
+    position: relative;
+    z-index: -2;
+    top: -386px;
+    height: 285px;
+    width: 100%;
+  }
 }
+
+
 
 .navbar-container {
   margin-top: 229px;
@@ -26,7 +48,6 @@ body {
 
 @include media-breakpoint-down(md) {
   .banner-container {
-    top: -16px;
     padding: 0;
     .background-image {
       height: 301px;
@@ -34,27 +55,58 @@ body {
       background-size: contain;
       padding-top: 2rem;
       color: #fff;
+    }
+    .img-banner {
+    }
+    .text-banner {
       a {
         text-decoration: none;
         color: #fff;
       }
       p {
         color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
       }
       span {
         background-color: #ef0f44;
         padding: 0 .325rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
       }
       h1, h2 {
         font-size: 24px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
       }
       h2 {
         text-transform: uppercase;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+      }
+    }
+    .text-logo {
+      img.brain-watermark {
+        left: 8%;
+        width: 200px;
+        top: -200px;
+        height: auto;
       }
     }
   }
   h1.h1 {
     font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .banner-container {
+    .background-image {
+      top: -442px;
+    }
+    .text-logo {
+      left: -50px;
+      img.brain-watermark {
+        width: 250px;
+        height: auto;
+      }
+    }
   }
 }
 

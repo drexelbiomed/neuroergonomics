@@ -12,6 +12,7 @@ body {
     position: relative;
     img {
       bottom: 0px;
+      margin: 0 auto;
     }
   }
   .text-banner {
@@ -30,7 +31,7 @@ body {
   .background-image {
     position: relative;
     z-index: -2;
-    top: -386px;
+    top: -392px;
     height: 285px;
     width: 100%;
   }

@@ -1,41 +1,137 @@
-.background-image {
-  background-repeat: no-repeat;
-  background-position: top center;
+// Body bg color
+body {
+  background: #DCDCDC;
+}
 
-  @include media-breakpoint-up(xs) {
-    background-image: image-url("banner-sm.png");
-    height: 240px;
-    background-size: contain;
+// Scaffolding
+.banner-container {
+  position: absolute;
+  top: 0px;
+  height: 285px;
+  .img-banner {
+    position: relative;
+    img {
+      bottom: 0px;
+      margin: 0 auto;
+    }
   }
-  @include media-breakpoint-up(sm) {
-    background-image: image-url("banner-md.png");
-    height: 280px;
-    background-size: contain;
+  .text-banner {
+    position: relative;
+    top: 2rem;
   }
-  @include media-breakpoint-up(md) {
-    height: 276px;
-    background-size: contain;
+  .text-logo {
+    position: relative;
+    z-index: -1;
+    top: 2rem;
+    img.brain-watermark {
+      position: relative;
+      top: initial;
+    }
   }
-  @include media-breakpoint-up(lg) {
-    background-image: image-url("banner-lg.png");
-    height: 220px;
-    background-size: contain;
-  }
-  @include media-breakpoint-up(xl) {
+  .background-image {
+    position: relative;
+    z-index: -2;
+    top: -392px;
     height: 285px;
-    background-size: contain;
+    width: 100%;
   }
 }
 
-.display-4 {
-  color: #ef0f44;
 
-  @include media-breakpoint-up(xs) {
-    font-size: 2rem;
+
+.navbar-container {
+  margin-top: 229px;
+}
+
+.breadcrumb-container {
+  position: absolute;
+}
+
+@include media-breakpoint-down(md) {
+  .banner-container {
+    padding: 0;
+    .background-image {
+      height: 301px;
+      background-image: image-url('banner-mobile.png');
+      background-size: contain;
+      padding-top: 2rem;
+      color: #fff;
+    }
+    .img-banner {
+    }
+    .text-banner {
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+      }
+      span {
+        background-color: #ef0f44;
+        padding: 0 .325rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+      }
+      h1, h2 {
+        font-size: 24px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+      }
+      h2 {
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+      }
+    }
+    .text-logo {
+      img.brain-watermark {
+        left: 8%;
+        width: 200px;
+        top: -200px;
+        height: auto;
+      }
+    }
   }
-  @include media-breakpoint-up(md) {
-    font-size: 2.5rem;
+  h1.h1 {
+    font-size: 1.5rem;
   }
+}
+
+@include media-breakpoint-down(sm) {
+  .banner-container {
+    .background-image {
+      top: -442px;
+    }
+    .text-logo {
+      left: -50px;
+      img.brain-watermark {
+        width: 250px;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Banner Desktop
+@include media-breakpoint-up(lg) {
+  .banner-container {
+    .background-image {
+      background-repeat: no-repeat;
+      background-position: top center;
+      img {
+        position: relative;
+        bottom: 0px;
+        left: 50%;
+        margin-left: -560px;
+      }
+    }
+  }
+  .navbar-container {
+    margin-top: 245px;
+  }
+}
+
+.main {
+  margin-top: 3em;
 }
 
 p {
@@ -46,23 +142,144 @@ p {
   }
 }
 
+// Nav
+.navbar-dark .navbar-nav .nav-link {
+    background: transparent;
+    border: none;
+    &.active {
+      background: transparent;
+      border: none;
+      background-color: #343a40;
+    }
+}
+
+.nav-tabs { border: none;}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  background-color: #343a40;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar {
+    background-color: transparent !important;
+    border: none;
+    padding: 0 1rem;
+  }
+
+  .navbar-dark .nav-tabs {
+    border: none;
+    a.nav-link {
+      background: #333333;
+      color: #fefefe;
+      border: none;
+      margin-left: 5px;
+    }
+    a.nav-link.active {
+      color: #fefefe;
+      background-color: #778d9c;
+      border: none;
+    }
+
+    .nav-item.dropdown.show {
+      border: none;
+      a.nav-link.dropdown-toggle {
+        color: #fefefe;
+        background-color: #778d9c;
+      }
+
+      .dropdown-menu.show {
+        border: none;
+        background: #333333;
+        a.dropdown-item {
+          background: #333333;
+          color: #fefefe;
+          &:hover { background: #666666 }
+        }
+      }
+    }
+  }
+}
+
+.green-grey {
+  background-color: #778d9c;
+  padding-bottom: 3em;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+@include media-breakpoint-down(xs) {
+  ol.breadcrumb {
+    padding: .75rem 0rem;
+  }
+}
+
+ol.breadcrumb {
+  border: none;
+  background: none;
+  margin-left: -12px;
+  li.breadcrumb-item {
+    font-size: .75rem;
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &.active {
+      color: #fff;
+    }
+  }
+  .breadcrumb-item + ::before {
+    color: #b4bec9;
+    content: "»";
+    padding-left: .25rem;
+    padding-right: 0rem;
+  }
+}
+
+// Headings
+
+h1.h1, h2.h2, h3.h3, h4.h4 {
+  font-weight: bold;
+  color: #ef0f44;
+  margin: 1rem 0;
+  span {
+    font-weight: bold;
+    background-color: #333;
+    background-image: image-url("congruent_outline.png");
+    color: #efefef;
+    padding: 0 .25em .125em;
+  }
+}
+
+// Lead text
+
 p.lead, p strong {
   color: #23437c;
 }
 
+// Cards
+
 .card {
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border: none;
   .card-header {
     background-color: #006699;
     color: #ffffff;
+    font-weight: bold;
   }
 }
 
+// Fuschia
 span.red {
   color: #ef0f44;
 }
 
 .card-columns {
     .card {
+      box-shadow: none;
       border: 0;
       .card-body {
         padding: 0rem

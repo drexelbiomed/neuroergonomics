@@ -4,31 +4,34 @@
     %meta{charset: 'utf-8'}
     %meta{content: 'ie=edge', 'http-equiv':'x-ua-compatible'}
     %meta{content: 'width=device-width, initial-scale=1', name: 'viewport'}
-    %meta{content: @meta_description, name: 'description'}
-    %meta{content: @meta_keywords, name: 'keywords'}
+    %meta{content: current_resource.data.meta_description, name: 'description'}
+    %meta{content: current_resource.data.meta_keywords, name: 'keywords'}
 
     %title
-      =@title
+      = "Neuroergonomics Conference 2018 – " + current_resource.data.title
 
     // stylesheets
     =stylesheet_link_tag  'application'
     %link{href: '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel: 'stylesheet', integrity: 'sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==', crossorigin: 'anonymous'}
 
-    // open graph data
+      // open graph data
     %meta{content: 'http://biomed.drexel.edu/neuroergonomics/', property: 'og:url'}
     %meta{content: 'website', property: 'og:type'}
-    %meta{content: "#{@title}", property: 'og:title'}
+    %meta{content: "#{current_resource.data.title}", property: 'og:title'}
     %meta{content: 'Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of high-value and exciting presentations from the community’s world-leading scientists on the cutting edge of exciting new areas of Neuroergonomics research.', property: 'og:description'}
     %meta{content: 'http://biomed.drexel.edu/neuroergonomics/images/banner.png', property: 'og:image'}
 
     // twitter card data
     %meta{content:'summary', name:'twitter:card'}
     %meta{content:'@drexelbiomed', name:'twitter:site'}
-    %meta{content:'Your Awesome Title', name:'twitter:title'}
-    %meta{content:'Your Description', name: 'twitter:description'}
+    %meta{content:'Neuroergonomics Conference 2018 – Philadelphia', name:'twitter:title'}
+    %meta{content:'Join hundreds of scientists, leading researchers, and interested industry colleagues for two full days of Neuroergonomics presentations', name: 'twitter:description'}
     %meta{content: '@drexelbiomed', name: 'twitter:creator'}
 
     %link{type:'text/plain', rel:'author', href:'/humans.txt'}
+
+    - if build?
+      = partial 'partials/ga'
 
     // favicons
     %link{rel:'icon', href:'favicon.png'}
@@ -39,10 +42,32 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
-  %body{class: @page_classes}
+  %body{class: current_resource.data.page_classes}
+    .container-fluid.banner-container
+      .row
+        .col-12
+          = partial 'partials/header'
+    .container.navbar-container
+      .row
+        .col-12
+          = partial 'partials/nav/navbar'
+    .container-fluid.breadcrumb-container
+      .row.green-grey
+        .col-12
+          .container
+            .row
+              .col-12
+                = partial 'partials/nav/breadcrumbs'
+    .container.main
+      .row
+        .col-lg-8
+          .card
+            .card-body
+              = yield
+        .col-lg-4
+          = partial 'partials/sidebar'
 
-    = partial 'partials/header'
-
-    = yield
-
-    = partial 'partials/footer'
+    .container-fluid
+      .row
+        .col-12
+          = partial 'partials/footer'

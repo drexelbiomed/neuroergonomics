@@ -29,5 +29,66 @@ meta_description: 'Join hundreds of scientists, researchers, and industry collea
 / ----------------------------------------------------------------------
 %h2.h2.text-center
   %span Keynote Speakers
-%p <strong>Michael Posner</strong>, Professor Emeritus at the University of Oregon and Adjunct Professor at the Weill Medical College in New York (Sackler Institute)
+%p <strong>Danielle Bassett</strong>, Eduardo D. Glandt Faculty Fellow and Associate Professor of Bioengineering, University of Pennsylvania
 %p <strong>Scott Makeig</strong>, Research Scientist & Director, Swartz Center for Computational Neuroscience (SCCN) · Institute for Neural Computation (INC) University of California San Diego (UCSD)
+%p <strong>Michael Posner</strong>, Professor Emeritus at the University of Oregon and Adjunct Professor at the Weill Medical College in New York (Sackler Institute)
+
+%hr.my-4
+/ ----------------------------------------------------------------------
+%h2.h2.text-center
+  %span Publications
+%p Conference Proceedings: All accepted abstracts will be assigned a doi number, published by Frontiers and will be indexed and searchable online for citations.
+
+%p Journal Publication: The Journal of Frontiers in Human Neuroscience (IF:3.2) will publish expanded versions of accepted conference submissions. Attendees are encouraged to contribute to the research topic:
+
+%p.text-center
+  = link_to "Neuroergonomics: the Brain at Work in Everyday Settings", "https://www.frontiersin.org/research-topics/7089/neuroergonomics-the-brain-at-work-in-everyday-settings", :class => "btn btn-outline-primary"
+
+%p Attendees are also encouraged to submit to the International Annual BCI-Research Award, endowed with 6,000 USD, is one of the top accolades in BCI research.
+
+%p.text-center
+  = link_to "http://www.bci-award.com/Home" do
+    = image_tag "BCI-Award.png", :alt => "Annual BCI Award 2018"
+
+%hr.my-4
+/ ----------------------------------------------------------------------
+%h2.h2.text-center
+  %span Conference Sponsors
+%h2.h2.text-center
+  Diamond
+
+.sponsors
+  .card-deck
+    .card{style: "width: 15rem;"}
+      = image_tag "Drexel_Vertical_stacked_479.png", :class=> "card-img-top", :alt => "%p Drexel University School of Biomedical Engineering, Science and Health Systems"
+      .card-body
+        %p.card-text School of Biomedical Engineering, Science and Health Systems
+        = link_to "Visit Website", "https://drexel.edu/biomed", :class => "card-link"
+
+    .card{style: "width: 15rem;"}
+      = image_tag "afrl-logo.png", :class=> "card-img-top", :alt => "%p Air Force Research Lab (AFRL)"
+      .card-body
+        %p.card-text Air Force Research Lab (AFRL)
+        = link_to "Visit Website", "http://www.wpafb.af.mil/afrl/", :class => "card-link"
+
+    .card{style: "width: 15rem;"}
+      = image_tag "biopac-systems-inc-logo.png", :class=> "card-img-top", :alt => "%p Air Force Research Lab (AFRL)"
+      .card-body
+        %p.card-text Biopac Systems Inc.
+        = link_to "Visit Website", "https://biopac.com", :class => "card-link"
+
+  %h2.h2.text-center
+    Platinum
+  .card{style: "width: 12rem;"}
+    = image_tag "frontiers-logo.png", :class=> "card-img-top", :alt => "%p Frontiers"
+    .card-body
+      %p.card-text Frontiers
+      = link_to "Visit Website", "https://frontiersin.org", :class => "card-link"
+
+  %h2.h2.text-center
+    Gold
+  .card{style: "width: 10rem;"}
+    = image_tag "gtec_logo_manual.jpg", :class=> "card-img-top", :alt => "%p g.tec"
+    .card-body
+      %p.card-text g.tec
+      = link_to "Visit Website", "http://gtec.at", :class => "card-link"

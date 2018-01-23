@@ -295,7 +295,7 @@ span.red {
   box-shadow: none;
 }
 
-a.list-group-item.list-group-item-action.active {
+a.list-group-item.list-group-item-action.active, li.list-group-item.active  {
   background-color: #333333;
   border-color: #333333;
 }

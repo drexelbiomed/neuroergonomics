@@ -63,9 +63,15 @@
         .col-lg-8
           .card
             .card-body
+              -if sidebar?
+                = partial 'partials/nav/mobile-sidebar'
               = yield
         .col-lg-4
+          %br.d-lg-none
+          - if sidebar?
+            = partial 'partials/nav/sidebar'
           = partial 'partials/sidebar'
+          %br.d-lg-none
 
     .container-fluid
       .row

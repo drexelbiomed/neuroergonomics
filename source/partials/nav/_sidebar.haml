@@ -1,0 +1,40 @@
+- case current_resource.data.category
+- when "Submissions"
+  .list-group.d-none.d-lg-block
+    %a.list-group-item.list-group-item-action.active{:href => "#"}
+      Submissions
+    %a.list-group-item.list-group-item-action{:href => "#guidelines"}
+      Guidelines
+      %span.badge.badge-primary.badge-pill
+        New
+    %a.list-group-item.list-group-item-action{:href => "#submission-system"}
+      Submission System
+      %span.badge.badge-primary.badge-pill
+        New
+  %br
+- when "Attending"
+  .list-group.d-none.d-lg-block
+    %a.list-group-item.list-group-item-action.active{:href => "#"}
+      Attending
+    %a.list-group-item.list-group-item-action{:href => "#registration"}
+      Registration
+      %span.badge.badge-primary.badge-pill
+        New
+  %br
+- when "Venue"
+  .list-group.d-none.d-lg-block
+    %a.list-group-item.list-group-item-action.active{:href => "#"}
+      Venue
+    %a.list-group-item.list-group-item-action{:href => "#travel"}
+      Travel &amp; Transportation
+      %span.badge.badge-primary.badge-pill
+        New
+    %a.list-group-item.list-group-item-action{:href => "#hotel"}
+      Hotel Accomodations
+      %span.badge.badge-primary.badge-pill
+        New
+    %a.list-group-item.list-group-item-action{:href => "#philadelphia"}
+      City of Philadelphia
+      %span.badge.badge-primary.badge-pill
+        New
+  %br

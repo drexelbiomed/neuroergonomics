@@ -21,9 +21,14 @@ page '/*.txt', layout: false
 ###
 
 require 'yaml'
+helpers do
+  def data
+    cnf = YAML::load(File.open('data/ftp.yml'))
+  end
 
-def data
-  cnf = YAML::load(File.open('data/ftp.yml'))
+  def prefix
+    build? ? "/neuroergonomics/" : "/"
+  end
 end
 
 ###

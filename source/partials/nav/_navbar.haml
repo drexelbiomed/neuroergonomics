@@ -5,59 +5,48 @@
     %ul.navbar-nav.mr-auto{:role => "presentation"}
       %li.nav-item.dropdown
         - if current_resource.data.category == "Home"
-          %a.nav-link.dropdown-toggle.active{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
-            Neuroergonomics 2018
+          %a.nav-link.active{:href => prefix}
+            Home
         - elsif current_resource.data.category != "Home"
-          %a.nav-link.dropdown-toggle{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
-            Neuroergonomics 2018
-        .dropdown-menu
-          - sitemap.resources.group_by { |f| f.data['category'] }['Home'].reverse.each do |p|
-            = link_to p.data.title, "/neuroergonomics/#{p.path}", class: 'dropdown-item'
+          %a.nav-link{:href => prefix}
+            Home
+
+      - if current_resource.data.category == "Call for Abstracts"
+        %li.nav-item
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Call for Abstracts'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Call for Abstracts'][0].path}", class: "nav-link active"
+      - if current_resource.data.category != "Call for Abstracts"
+        %li.nav-item
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Call for Abstracts'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Call for Abstracts'][0].path}", class: "nav-link"
 
 
-      - if current_resource.data.category == "Registration"
+
+      - if current_resource.data.category == "Submissions"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Registration'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Registration'][0].path}", class: "nav-link active"
-      - if current_resource.data.category != "Registration"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Submissions'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Submissions'][0].path}", class: "nav-link active"
+      - if current_resource.data.category != "Submissions"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Registration'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Registration'][0].path}", class: "nav-link"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Submissions'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Submissions'][0].path}", class: "nav-link"
 
 
-      - if current_resource.data.category == "Submission"
+      - if current_resource.data.category == "Attending"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Submission'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Submission'][0].path}", class: "nav-link active"
-      - if current_resource.data.category != "Submission"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].path}", class: "nav-link active"
+      - if current_resource.data.category != "Attending"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Submission'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Submission'][0].path}", class: "nav-link"
-
-
-      - if current_resource.data.category == "Program"
-        %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].path}", class: "nav-link active"
-      - if current_resource.data.category != "Program"
-        %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].path}", class: "nav-link"
-
-
-      - if current_resource.data.category == "Sponsors"
-        %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Sponsors'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Sponsors'][0].path}", class: "nav-link active"
-      - if current_resource.data.category != "Sponsors"
-        %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Sponsors'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Sponsors'][0].path}", class: "nav-link"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].path}", class: "nav-link"
 
 
       - if current_resource.data.category == "Venue"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].path}", class: "nav-link active"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].path}", class: "nav-link active"
       - if current_resource.data.category != "Venue"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].path}", class: "nav-link"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].path}", class: "nav-link"
 
 
-      - if current_resource.data.category == "Contact"
+      - if current_resource.data.category == "About"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Contact'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Contact'][0].path}", class: "nav-link active"
-      - if current_resource.data.category != "Contact"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['About'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['About'][0].path}", class: "nav-link active"
+      - if current_resource.data.category != "About"
         %li.nav-item
-          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Contact'][0].data.title, "/neuroergonomics/" + "#{sitemap.resources.group_by { |f| f.data['category'] }['Contact'][0].path}", class: "nav-link"
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['About'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['About'][0].path}", class: "nav-link"

@@ -5,14 +5,11 @@
     %ul.navbar-nav.mr-auto{:role => "presentation"}
       %li.nav-item.dropdown
         - if current_resource.data.category == "Home"
-          %a.nav-link.dropdown-toggle.active{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
-            Neuroergonomics 2018
+          %a.nav-link.active{:href => prefix}
+            Home
         - elsif current_resource.data.category != "Home"
-          %a.nav-link.dropdown-toggle{:href => "#", "data-toggle" => "dropdown", :role => "button", "aria-haspopup" => "true", "aria-expanded" => "false"}
-            Neuroergonomics 2018
-        .dropdown-menu
-          - sitemap.resources.group_by { |f| f.data['category'] }['Home'].reverse.each do |p|
-            = link_to p.data.title, "#{prefix}#{p.path}", class: 'dropdown-item'
+          %a.nav-link{:href => prefix}
+            Home
 
       - if current_resource.data.category == "Call for Abstracts"
         %li.nav-item

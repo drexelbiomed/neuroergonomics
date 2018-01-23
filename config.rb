@@ -29,6 +29,15 @@ helpers do
   def prefix
     build? ? "/neuroergonomics/" : "/"
   end
+
+  def parent_pages
+    ["Submissions", "Attending", "Venue", "About"]
+  end
+
+  def sidebar?
+    s = current_resource.data.category
+    parent_pages.any? { |i| i[s] }
+  end
 end
 
 ###

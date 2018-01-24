@@ -21,13 +21,19 @@ page '/*.txt', layout: false
 ###
 
 require 'yaml'
+
+
+YAML.load(File.open('data/ftp.yml')).each do |key, value|
+  ENV[key.to_s] = value
+end if File.exists?('data/ftp.yml')
+
 helpers do
   def data
     cnf = YAML::load(File.open('data/ftp.yml'))
   end
 
   def prefix
-    build? ? "/neuroergonomics/" : "/"
+    build? ? ENV["alias"] : "/"
   end
 
   def parent_pages
@@ -104,10 +110,10 @@ configure :build do
   # Middleman Deploy (https://github.com/middleman-contrib/middleman-deploy/)
   activate :deploy do |deploy|
     deploy.deploy_method   = :ftp
-    deploy.host            = data["host"]
-    deploy.path            = data["path"]
-    deploy.user            = data["user"]
-    deploy.password        = data["pass"]
+    deploy.host            = ENV["host"]
+    deploy.path            = ENV["path"]
+    deploy.user            = ENV["user"]
+    deploy.password        = ENV["pass"]
     deploy.build_before = true
   end
 

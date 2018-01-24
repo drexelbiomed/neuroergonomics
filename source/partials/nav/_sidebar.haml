@@ -1,4 +1,17 @@
 - case current_resource.data.category
+- when "About"
+  .list-group.d-none.d-lg-block
+    %a.list-group-item.list-group-item-action.active{:href => "#"}
+      About
+    %a.list-group-item.list-group-item-action{:href => "#contact"}
+      Contact
+      %span.badge.badge-primary.badge-pill
+        New
+    %a.list-group-item.list-group-item-action{:href => "#committees"}
+      Committees
+      %span.badge.badge-primary.badge-pill
+        New
+  %br
 - when "Call for Abstracts"
   .list-group.d-none.d-lg-block
     %a.list-group-item.list-group-item-action.active{:href => "#"}

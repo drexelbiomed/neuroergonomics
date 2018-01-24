@@ -1,23 +1,36 @@
 - case current_resource.data.category
+- when "About"
+  %ul.nav.text-center.flex-column.justify-content-center.nav-pills.justify-content-center.d-lg-none
+    %li.nav-item
+      %a.nav-link{:href => "#contact"}
+        Contact
+    %li.nav-item
+      %a.nav-link{:href => "#committees"}
+        Committees
+  %hr.d-lg-none
+
 - when "Call for Abstracts"
-  %ul.nav.nav-pills.justify-content-center.d-lg-none
+  %ul.nav.text-center.flex-column.justify-content-center.nav-pills.justify-content-center.d-lg-none
     %li.nav-item
       %a.nav-link{:href => "#publications"}
         Publications
     %li.nav-item
       %a.nav-link{:href => "#topics"}
         Topics of Interest
+  %hr.d-lg-none
+
 - when "Submissions"
-  %ul.nav.nav-pills.justify-content-center.d-lg-none
+  %ul.nav.text-center.flex-column.justify-content-center.nav-pills.justify-content-center.d-lg-none
     %li.nav-item
       %a.nav-link{:href => "#guidelines"}
         Guidelines
     %li.nav-item
       %a.nav-link{:href => "#submission-system"}
         Submission System
+  %hr.d-lg-none
 
 - when "Venue"
-  %ul.nav.nav-pills.justify-content-center.d-lg-none
+  %ul.nav.text-center.flex-column.justify-content-center.nav-pills.justify-content-center.d-lg-none
     %li.nav-item
       %a.nav-link{:href => "#travel"}
         Travel &amp; Transportation
@@ -27,7 +40,4 @@
     %li.nav-item
       %a.nav-link{:href => "#city"}
         City of Philadelphia
-
-
-
   %hr.d-lg-none

@@ -37,7 +37,7 @@ helpers do
   end
 
   def parent_pages
-    ["Call for Abstracts", "Submissions", "Attending", "Venue", "About"]
+    ["Call for Abstracts", "Submissions", "Attending", "Venue", "About", "Other"]
   end
 
   def sidebar?

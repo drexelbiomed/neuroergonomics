@@ -36,6 +36,13 @@
           = link_to sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Attending'][0].path}", class: "nav-link"
 
 
+      - if current_resource.data.category == "Program"
+        %li.nav-item
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].path}", class: "nav-link active"
+      - if current_resource.data.category != "Program"
+        %li.nav-item
+          = link_to sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Program'][0].path}", class: "nav-link"
+
       - if current_resource.data.category == "Venue"
         %li.nav-item
           = link_to sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].data.title, prefix + "#{sitemap.resources.group_by { |f| f.data['category'] }['Venue'][0].path}", class: "nav-link active"

@@ -85,3 +85,16 @@
       %span.badge.badge-primary.badge-pill
         New
   %br
+- when "Program"
+  .list-group.d-none.d-lg-block
+    %a.list-group-item.list-group-item-action.active{:href => "#"}
+      Satellite Events
+    %a.list-group-item.list-group-item-action{:href => prefix + "program/symposium.html"}
+      Symposium
+      %span.badge.badge-primary.badge-pill
+        New
+    %a.list-group-item.list-group-item-action{:href => prefix + "program/workshops.html"}
+      Workshops
+      %span.badge.badge-primary.badge-pill
+        New
+  %br

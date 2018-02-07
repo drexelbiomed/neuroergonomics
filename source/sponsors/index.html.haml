@@ -1,0 +1,57 @@
+---
+category: 'Sponsors'
+title: 'Sponsors'
+---
+
+%h1.h1.text-center
+  %span= current_resource.data.title
+
+%h2.h2.text-center
+  Diamond
+
+.sponsors
+  .card-deck
+    .card{style: "width: 15rem;"}
+      = image_tag "Drexel_Vertical_stacked_479.png", :class=> "card-img-top", :alt => "Drexel University School of Biomedical Engineering, Science and Health Systems"
+      .card-body
+        %p.card-text School of Biomedical Engineering, Science and Health Systems
+        = link_to "Visit Website", "https://drexel.edu/biomed", :class => "card-link btn btn-outline-primary"
+
+    .card{style: "width: 15rem;"}
+      = image_tag "afrl-logo.png", :class=> "card-img-top", :alt => "Air Force Research Lab (AFRL)"
+      .card-body
+        %p.card-text Air Force Research Lab (AFRL)
+        = link_to "Visit Website", "http://www.wpafb.af.mil/afrl/", :class => "card-link btn btn-outline-primary"
+    .card{style: "width: 15rem;"}
+      = image_tag "biopac-systems-inc-logo.png", :class=> "card-img-top", :alt => "Biopac Systems Inc."
+      .card-body
+        %p.card-text Biopac Systems Inc.
+        = link_to "Visit Website", "https://biopac.com", :class => "card-link btn btn-outline-primary"
+  %hr
+  %h2.h2.text-center
+    Platinum
+  .card-deck
+    .card{style: "width: 10rem;"}
+    .card{style: "width: 12rem;"}
+      = image_tag "frontiers-logo.png", :class=> "card-img-top", :alt => "Frontiers"
+      .card-body
+        %p.card-text
+          = link_to "Visit Website", "https://frontiersin.org", :class => "card-link btn btn-outline-primary"
+    .card{style: "width: 10rem;"}
+
+  %hr
+  %h2.h2.text-center
+    Gold
+  .card-deck
+    .card{style: "width: 10rem;"}
+    .card{style: "width: 10rem;"}
+      = image_tag "gtec_logo_manual.jpg", :class=> "card-img-top", :alt => "g.tec"
+      .card-body
+        %p.card-text
+          = link_to "Visit Website", "http://gtec.at", :class => "card-link btn btn-outline-primary"
+    .card{style: "width: 10rem;"}
+      = image_tag "mBT_vertical.png", :class=> "card-img-top", :alt => "mBrain Train"
+      .card-body
+        %p.card-text
+          = link_to "Visit Website", "http://www.mbraintrain.com", :class => "card-link btn btn-outline-primary"
+    .card{style: "width: 10rem;"}

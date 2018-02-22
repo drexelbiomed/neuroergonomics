@@ -291,8 +291,23 @@ span.red {
   height: auto;
 }
 
-.sponsors .card {
-  box-shadow: none;
+.sponsors {
+  .card-deck.platinum {
+    .card {
+      img{ max-width: 12rem;}
+    }
+  }
+  .card {
+    text-align: center;
+    box-shadow: none;
+    img {
+      max-width: 10rem;
+      margin: 0 auto;
+    }
+    .card-body {
+      padding: 1rem 0 0;
+    }
+  }
 }
 
 a.list-group-item.list-group-item-action.active, li.list-group-item.active  {

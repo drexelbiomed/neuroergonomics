@@ -35,6 +35,21 @@ meta_description: 'Join hundreds of scientists, researchers, and industry collea
 %p <strong>Scott Makeig</strong>, Research Scientist & Director, Swartz Center for Computational Neuroscience (SCCN) · Institute for Neural Computation (INC) University of California San Diego (UCSD)
 %p <strong>Danielle Bassett</strong>, Eduardo D. Glandt Faculty Fellow and Associate Professor of Bioengineering, University of Pennsylvania
 
+%h2.h2.text-center
+  %span Invited Speakers
+%p <strong>Carryl Baldwin</strong>, Director, Human Factors and Applied Cognition Program, Associate Professor, Department of Psychology, George Mason University, Fairfax, VA US
+%p <strong>Marom Bikson</strong>, Professor, Department of Biomedical Engineering, The City College of New York, New York, NY, USA
+%p <strong>Daniel Callan</strong>, Principle Investigator, Center for Information and Neural Networks, National Institute of Information and Communications Technology, Osaka University, Osaka, Japan
+%p <strong>Ricardo Chavarriaga</strong>, Research Scientist, Defitech Foundation Chair in Brain-machine Interface, School of Engineering, Ecole Polytechnique Fédérale de Lausanne EPFL, Lausanne, Switzerland
+%p <strong>Lewis Chuang</strong>, Group Leader, Max Planck Institute for Biological Cybernetics, Tubingen, German
+%p <strong>Ippeita Dan</strong>, Professor, Institute of Science and Engineering, Chuo University, Tokyo, Japan
+%p <strong>Frederic Dehais</strong>, Professor, Institut Supérieur de l'Aéronautique et de l'Espace (ISAE), Toulouse, France
+%p <strong>Klaus Gramann</strong>, Professor, Department of Psychology and Ergonomics, Chair Biological Psychology and Neuroergonomics, Technische Universität Berlin, Berlin, Germany
+%p <strong>Roy Hamilton</strong>, Director, Laboratory for Cognition and Neural Stimulation, Associate Professor, Departments of Neurology and Physical Medicine and Rehabilitation, University of Pennsylvania, Philadelphia, PA, USA
+%p <strong>Sid Kouider</strong>, Research Director, Laboratoire de Sciences Cognitives et Psycholinguistique, Ecole Normale Supèrieure, Paris, France
+%p <strong>John Kounios</strong>, Director, Doctoral Program in Applied Cognitive and Brain Sciences, Director, Creativity Research Lab, Professor of Psychology, Drexel University, Philadelphia, PA, USA
+%p <strong>Thorsten Zander</strong>, Leader of Team PhyPA, Department of Biological Psychology and Neuroergonomics, Technische Universität Berlin, Berlin, Germany
+
 %hr.my-4
 / ----------------------------------------------------------------------
 %h2.h2.text-center
@@ -60,77 +75,4 @@ meta_description: 'Join hundreds of scientists, researchers, and industry collea
 %br
 %br
 / ----------------------------------------------------------------------
-%h2.h2.text-center
-  Conference Sponsors
-.sponsors
-  %h2.h2.text-center
-    %span Diamond
-  %hr
-  .card-deck.diamond
-    .card
-      = image_tag "Drexel_Vertical_stacked_479.png", :class=> "card-img-top", :alt => "Drexel University School of Biomedical Engineering, Science and Health Systems"
-      .card-body
-        %p.card-text School of Biomedical Engineering, Science and Health Systems
-        = link_to "Visit Website", "https://drexel.edu/biomed", :class => "card-link btn btn-outline-primary"
-
-    .card
-      = image_tag "airforce-research-laboratory.jpg", :class=> "card-img-top", :alt => "Air Force Research Lab (AFRL)"
-      .card-body
-        %p.card-text Air Force Research Lab (AFRL)
-        = link_to "Visit Website", "http://www.wpafb.af.mil/afrl/", :class => "card-link btn btn-outline-primary"
-    .card
-      = image_tag "biopac-systems-inc-logo.png", :class=> "card-img-top", :alt => "Biopac Systems Inc."
-      .card-body
-        %p.card-text Biopac Systems Inc.
-        = link_to "Visit Website", "https://biopac.com", :class => "card-link btn btn-outline-primary"
-  %br
-  %br
-  %h2.h2.text-center
-    %span Platinum
-  %hr
-  .card-deck.platinum
-    .card
-      = image_tag "frontiers-logo.png", :class=> "card-img-top", :alt => "Frontiers"
-      .card-body
-        %p.card-text
-        = link_to "Visit Website", "https://frontiersin.org", :class => "card-link btn btn-outline-primary"
-    .card
-      = image_tag "lockheed-martin-logo.png", :class=> "card-img-top", :alt => "Lockheed Martin"
-      .card-body
-        %p.card-text Advanced Technology Laboratories
-        = link_to "Visit Website", "https://www.lockheedmartin.com/us/atl.html", :class => "card-link btn btn-outline-primary"
-  %br
-  %br
-  %h2.h2.text-center
-    %span Gold
-  %hr
-  .card-deck.gold
-    .card
-      = image_tag "gtec_logo_manual.jpg", :class=> "card-img-top", :alt => "g.tec"
-      .card-body
-        %p.card-text
-          = link_to "Visit Website", "http://gtec.at", :class => "card-link btn btn-outline-primary"
-    .card
-      = image_tag "mBT_vertical.png", :class=> "card-img-top", :alt => "mBrain Train"
-      .card-body
-        %p.card-text
-          = link_to "Visit Website", "http://www.mbraintrain.com", :class => "card-link btn btn-outline-primary"
-    .card
-      = image_tag "nirx.png", :class=> "card-img-top", :alt => "NIRX"
-      .card-body
-        %p.card-text
-          = link_to "Visit Website", "http://nirx.net", :class => "card-link btn btn-outline-primary"
-  %br
-  %br
-
-  .card-deck.gold
-    .card
-      = image_tag "cognionics-logo.png", :class=> "card-img-top", :alt => "Cognionics"
-      .card-body
-        %p.card-text
-          = link_to "Visit Website", "http://www.cognionics.com", :class => "card-link btn btn-outline-primary"
-    .card
-      = image_tag "Wearable_Sensing_Logo.png", :class=> "card-img-top", :alt => "Wearable Sensing"
-      .card-body
-        %p.card-text
-          = link_to "Visit Website", "http://wearablesensing.com", :class => "card-link btn btn-outline-primary"
+= partial "partials/cards/sponsors"

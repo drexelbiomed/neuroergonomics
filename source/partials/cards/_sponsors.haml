@@ -16,11 +16,20 @@
       .card-body
         %p.card-text Air Force Research Lab (AFRL)
         = link_to "Visit Website", "http://www.wpafb.af.mil/afrl/", :class => "card-link btn btn-outline-primary"
+  %br
+
+  .card-deck.diamond
     .card
-      = image_tag "biopac-systems-inc-logo.png", :class=> "card-img-top", :alt => "Biopac Systems Inc."
+      = image_tag "biopac-systems-inc-logo.png", :class=> "card-img-top", :alt => "Biopac Systems Inc.", :style => "max-width: 15rem;"
       .card-body
         %p.card-text Biopac Systems Inc.
         = link_to "Visit Website", "https://biopac.com", :class => "card-link btn btn-outline-primary"
+    .card
+      = image_tag "brain-products-logo.png", :class=> "card-img-top", :alt => "Brain Products", :style => "max-width: 15rem;"
+      .card-body
+        %p.card-text Brain Products
+        = link_to "Visit Website", "https://brainproducts.com", :class => "card-link btn btn-outline-primary"
+
   %br
   %br
   %h2.h2.text-center

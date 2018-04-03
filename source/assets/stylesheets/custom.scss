@@ -315,3 +315,12 @@ a.list-group-item.list-group-item-action.active, li.list-group-item.active  {
   background-color: #333333;
   border-color: #333333;
 }
+
+ol, ul {
+  li {
+    margin-bottom: 1em;
+  }
+  .h4 {
+    margin-left: -40px;
+  }
+}

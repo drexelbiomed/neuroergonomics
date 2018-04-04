@@ -6,30 +6,25 @@ title: 'Program'
 %h1.h1.text-center
   %span= current_resource.data.title
 
-%p The conference program will span for three days (June 27th, 28th and 29th) featuring three keynote speakers, multiple invited talks from experts around the world and technical sessions. The program agenda will soon be available. In the meantime, please submit your contributions and register for the conference.
+%p The conference program will span for three days (June 27th, 28th and 29th) featuring three keynote speakers, multiple invited talks from experts around the world and technical sessions. The program agenda will soon be available. In the meantime, please <a href="../submissions">submit your contributions</a> and <a href="../attending">register</a> for the conference.
 
-%p
-  = partial "partials/buttons/register"
+%h2.h2 Satellite Events
+%p 2nd International Neuroergonomics Conference will include a Neuroengineering symposium and multiple workshops on June 27<sup>th</sup>.
+.card-deck
+  .card
+    .card-header.bg-primary
+      %h3{:style => "font-size: 18px; margin: 0;"} Symposium
+    .card-body
+      %p
+        %strong Neuroengineering: Probing and rewiring neural circuits
+      %p
+        %a.btn.btn-sm.btn-primary{:href => prefix + "program/symposium.html"} Symposium Info &rarr;
 
-%p
-  = partial "partials/buttons/submit", :locals => {:classes => "btn btn-info"}
-
-%br
-%br
-%h2.h2.text-center
-  %span Satellite Events
-%h3.h3 Agenda
-%p 2nd International Neuroergonomics Conference will include a Neuroengineering symposium and multiple workshops.
-%hr
-%h3.h3{:style => "font-size: 18px;"} Symposium
-%p Neuroengineering: Probing and rewiring neural circuits
-%p
-  %a.btn.btn-sm.btn-outline-primary{:href => prefix + "program/symposium.html"} Symposium Information
-
-%hr
-%h3.h3{:style => "font-size: 18px;"} Workshops
-%p Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
-%p
-  %a.btn.btn-sm.btn-outline-primary{:href => prefix + "program/workshops.html"} Workshop Information
-%br
-%br
+  .card
+    .card-header.bg-primary
+      %h3{:style => "font-size: 18px; margin: 0;"} Workshops
+    .card-body
+      %p
+        %strong Multiple workshops
+      %p
+        %a.btn.btn-sm.btn-primary{:href => prefix + "program/workshops.html"} Workshops Info &rarr;

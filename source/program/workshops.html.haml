@@ -6,39 +6,35 @@ title: 'Workshops'
 %h1.h1.text-center
   %span= current_resource.data.title
 
-%h2.h2 Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
-%p
-  9:30 AM – 3:30 PM
-  %br
-  June 27, 2018
-  %br
-  Skyview room, Creese Student Center
-  %br
-  3201 Chestnut Street, Philadelphia, PA
-%h3.h3 About the workshop
-%p During this workshop, we will demonstrate major concepts in Brain Computer Interface (BCI) systems, including types of sensors, signal processing, and applications. New trends like embodiment, coma assessment and communication, stroke rehabilitation, and invasive ECoG based systems will also be explained. This year we will show the BCI Hackathon series br41n.io, the new wireless Unicorn, the new fNIRS-EEG device, new results of ECoG real-time face decoding and neurorehabilitation technology.
-%h3.h3 Speakers
-%p
-  <strong>Christoph Guger</strong>, <strong>Slav Dimov</strong>, g.tec medical engineering GmbH, Guger Technologies OG, g.tec neurotechnology USA, Inc.
-%p Dr. Christoph Guger is the CEO of g.tec medical engineering GmbH and is the CEO of g.tec medical engineering GmbH and is coordinating EU Horizon 2020 research projects such as recoveriX, ComAware, ComAlert and RapidMaps. He is also involved in the Flagship project Graphene.
-%p Slav Dimov is a specialist for neuro-rehabilitation with recoveriX technology.
-%h3.h3 Tentative Program
 %table.table
-  %tr
-    %td{:width => "180"} 9:30 AM – 10:00 AM
-    %td Introduction: non-invasive/invasive brain-computer interface systems, including current and future applications
-  %tr
-    %td 10:00 AM – 10:30 AM
-    %td The advantages of wireless, active dry and wet technology for BCI applications
-  %tr
-    %td 10:30 AM – 11:00 AM
-    %td Invasive ECoG recording and real-time analysis for avatar control
-  %tr
-    %td 11:30 AM – 12:00 PM
-    %td Cognitive assessment, motor rehabilitation, and communication with brain-computer interface technology
-  %tr
-    %td 12:00 PM – 12:30 PM
-    %td BCI technology in combination with brain stimulation and peripheral stimulation technology
-  %tr
-    %td 1:00 PM – 2:30 PM
-    %td Hands-on demos of BCI technology
+  %thead.bg-primary.text-white
+    %tr
+      %th
+      %th Title
+      %th Speakers
+  %tbody
+    %tr
+      %td 1
+      %td
+        %strong
+          %a{:href => "./workshop1.html"} Transcranial Direct Current Stimulation (tDCS): Advanced Theory and Hands-on Workshop
+      %td
+        Marom Bikson et al.
+    %tr
+      %td 2
+      %td
+        %strong Neuroadaptive Technologies and Dry EEG
+      %td Thorsten Zander et al.
+    %tr
+      %td 3
+      %td
+        %strong
+          %a{:href => "./workshop3.html"} Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
+      %td Christopher Guger et al.
+    %tr
+      %td 4
+      %td
+        %strong Mobile EEG Data Collection
+      %td Sponsor Hands-on Workshop / Demos
+%br
+= partial "partials/back-to-satellite"

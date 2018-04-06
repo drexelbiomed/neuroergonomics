@@ -5,36 +5,43 @@ title: 'Workshops'
 
 %h1.h1.text-center
   %span= current_resource.data.title
-
-%table.table
+%h2.h2 June 27th
+%table.table.table-striped.workshops
   %thead.bg-primary.text-white
     %tr
-      %th
+      %th #
+      %th Time
       %th Title
       %th Speakers
   %tbody
     %tr
-      %td 1
+      %th{:scope => "row"}
+        1
+      %td 9:30 AM – 3:30 PM
       %td
-        %strong
-          %a{:href => "./workshop1.html"} Transcranial Direct Current Stimulation (tDCS): Advanced Theory and Hands-on Workshop
+        %a{:href => "./workshop1.html"} Transcranial Direct Current Stimulation (tDCS): <br>Advanced Theory and Hands-on Workshop
       %td
         Marom Bikson et al.
     %tr
-      %td 2
+      %th{:scope => "row"}
+        2
+      %td TBD
       %td
-        %strong Neuroadaptive Technologies and Dry EEG
+        Neuroadaptive Technologies and Dry EEG
       %td Thorsten Zander et al.
     %tr
-      %td 3
+      %th{:scope => "row"}
+        3
+      %td 9:30 AM – 3:30 PM
       %td
-        %strong
-          %a{:href => "./workshop3.html"} Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
+        %a{:href => "./workshop3.html"} Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
       %td Christopher Guger et al.
     %tr
-      %td 4
+      %th{:scope => "row"}
+        4
+      %td 9:30 AM – 12:00 PM
       %td
-        %strong Mobile EEG Data Collection
-      %td Sponsor Hands-on Workshop / Demos
+        %a{:href => "./workshop4.html"} Wireless stimulus delivery for mobile EEG/ERP experiments
+      %td Ivan Gligorijević et al.
 %br
 = partial "partials/back-to-satellite"

@@ -20,20 +20,9 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
-require 'yaml'
-
-
-YAML.load(File.open('data/ftp.yml')).each do |key, value|
-  ENV[key.to_s] = value
-end if File.exists?('data/ftp.yml')
-
 helpers do
-  def data
-    cnf = YAML::load(File.open('data/ftp.yml'))
-  end
-
   def prefix
-    build? ? ENV["alias"] : "/"
+    build? ? "/neuroergonomics/" : "/"
   end
 
   def parent_pages
@@ -108,15 +97,26 @@ configure :build do
   ignore "*.psd"
 
   # Middleman Deploy (https://github.com/middleman-contrib/middleman-deploy/)
-  activate :deploy do |deploy|
-    deploy.deploy_method   = :ftp
-    deploy.host            = ENV["host"]
-    deploy.path            = ENV["path"]
-    deploy.user            = ENV["user"]
-    deploy.password        = ENV["pass"]
-    deploy.build_before = true
-  end
-
+  case ENV['TARGET'].to_s.downcase
+    when 'biomed'
+      activate :deploy do |deploy|
+        deploy.deploy_method   = :ftp
+        deploy.host            = ENV["BIOMED_HOST"]
+        deploy.path            = ENV["BIOMED_PATH"] + "neuroergonomics"
+        deploy.user            = ENV["BIOMED_USER"]
+        deploy.password        = ENV["BIOMED_PASS"]
+        deploy.build_before = true
+      end
+    when 'azure'
+      activate :deploy do |deploy|
+        deploy.deploy_method   = :ftp
+        deploy.host            = ENV["AZURE_HOST"]
+        deploy.path            = ENV["AZURE_PATH"] + "/events/neuroergonomics"
+        deploy.user            = ENV["AZURE_USER"]
+        deploy.password        = ENV["AZURE_PASS"]
+        deploy.build_before = true
+      end
+    end
 end
 
 # Production Environment

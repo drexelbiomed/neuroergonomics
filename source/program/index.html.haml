@@ -7,8 +7,20 @@ title: 'Program'
   %span= current_resource.data.title
 
 %p The conference program will span for three days (June 27th, 28th and 29th) featuring three keynote speakers, multiple invited talks from experts around the world and technical sessions. The program agenda will soon be available. In the meantime, please <a href="../submissions">submit your contributions</a> and <a href="../attending">register</a> for the conference.
+%p.text-center
+  %a.btn.btn-lg.btn-link{:href => prefix + "program/Neuroergonomics2018ConferencePrelimProgram.pdf"} View Preliminary Program  &rarr;
+%br
+%br
 
-%h2.h2 Satellite Events
+/ %h3.h3.text-center
+/   %span Schedule Overview
+/ %a{:href => prefix + "assets/images/ScheduleOverview_Version3.png"}
+/   = image_tag "ScheduleOverview_Version3.png", alt: "Schedule Overview V3", class: "img-fluid"
+
+/ %hr
+
+%h2.h2.text-center
+  %span Satellite Events
 %p 2nd International Neuroergonomics Conference will include a Neuroengineering symposium and multiple workshops on June 27<sup>th</sup>.
 .card-deck
   .card
@@ -18,8 +30,8 @@ title: 'Program'
       %p
         %strong Neuroengineering: Probing and rewiring neural circuits
       %p
-        %a.btn.btn-sm.btn-primary{:href => prefix + "program/symposium.html"} Symposium Info &rarr;
-
+        %a.btn.btn-link{:href => prefix + "program/symposium.html"} Symposium Info &rarr;
+  %br
   .card
     .card-header.bg-primary
       %h3{:style => "font-size: 18px; margin: 0;"} Workshops
@@ -27,4 +39,4 @@ title: 'Program'
       %p
         %strong Multiple workshops
       %p
-        %a.btn.btn-sm.btn-primary{:href => prefix + "program/workshops.html"} Workshops Info &rarr;
+        %a.btn.btn-link{:href => prefix + "program/workshops.html"} Workshops Info &rarr;

@@ -6,42 +6,43 @@ title: 'Workshops'
 %h1.h1.text-center
   %span= current_resource.data.title
 %h2.h2 June 27th
-%table.table.table-striped.workshops
-  %thead.bg-primary.text-white
-    %tr
-      %th #
-      %th Time
-      %th Title
-      %th Speakers
-  %tbody
-    %tr
-      %th{:scope => "row"}
-        1
-      %td 9:30 AM – 3:30 PM
-      %td
-        %a{:href => "./workshop1.html"} Transcranial Direct Current Stimulation (tDCS): <br>Advanced Theory and Hands-on Workshop
-      %td
-        Marom Bikson et al.
-    %tr
-      %th{:scope => "row"}
-        2
-      %td 9:30 AM – 3:30 PM
-      %td
-        %a{:href => "./workshop2.html"} Neuroadaptive Technologies and BCI+
-      %td Thorsten Zander et al.
-    %tr
-      %th{:scope => "row"}
-        3
-      %td 9:30 AM – 3:30 PM
-      %td
-        %a{:href => "./workshop3.html"} Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
-      %td Christopher Guger et al.
-    %tr
-      %th{:scope => "row"}
-        4
-      %td 9:30 AM – 12:00 PM
-      %td
-        %a{:href => "./workshop4.html"} Wireless Stimulus Delivery for Mobile EEG/ERP Experiments
-      %td Ivan Gligorijević et al.
+.table-responsive
+  %table.table.table-striped.workshops
+    %thead.bg-primary.text-white
+      %tr
+        %th #
+        %th Time
+        %th Title
+        %th Speakers
+    %tbody
+      %tr
+        %th{:scope => "row"}
+          1
+        %td 9:30 AM – 3:30 PM
+        %td
+          %a{:href => "./workshop1.html"} Transcranial Direct Current Stimulation (tDCS): <br>Advanced Theory and Hands-on Workshop
+        %td
+          Marom Bikson et al.
+      %tr
+        %th{:scope => "row"}
+          2
+        %td 9:30 AM – 3:30 PM
+        %td
+          %a{:href => "./workshop2.html"} Neuroadaptive Technologies and BCI+
+        %td Thorsten Zander et al.
+      %tr
+        %th{:scope => "row"}
+          3
+        %td 9:30 AM – 3:30 PM
+        %td
+          %a{:href => "./workshop3.html"} Brain-Computer Interface Workshop for Control, Assessment and Rehabilitation
+        %td Christopher Guger et al.
+      %tr
+        %th{:scope => "row"}
+          4
+        %td 9:30 AM – 12:00 PM
+        %td
+          %a{:href => "./workshop4.html"} Wireless Stimulus Delivery for Mobile EEG/ERP Experiments
+        %td Ivan Gligorijević et al.
 %br
 = partial "partials/back-to-satellite"

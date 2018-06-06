@@ -27,3 +27,56 @@ title: 'Attending'
 %p Registration includes access to all sessions, exhibits, welcome reception, conference program, digital conference proceedings, symposium and workshops plus additional conference handouts.
 %p.text-center
   = partial "partials/buttons/register"
+
+
+.accordion
+  .card
+    .card-header.bg-light#headingOne
+      %h5.mb-0
+        %button.btn.btn-link{"data-toggle" => "collapse", "data-target" => "#collapseOne", "aria-expanded"=>"true", "aria-controls"=>"collapseOne"}
+          %strong Day Care Options
+    #collapseOne.collapse{"aria-labelledby"=>"headingOne", "data-parent"=>"#accordion"}
+      .card-body
+        %p Since this is a professional conference, children will not be given admission in the event.
+        %p The following is a list of the family care facilities and services at Penn and nearby local communities:
+        %ul
+          %li
+            =link_to "The Penn Children's Center", "http://cms.business-services.upenn.edu/childcare/temporary-childcare/drop-in-childcare.html"
+            , 3160 Chestnut Street, (215) 898-5268
+            %br
+            Accredited by the National Association for the Education of Young Children (NAEYC), provides temporary care for children of visiting faculty, lecturers, conference and seminar attendees, international guests, and University staff and students.
+
+          %li
+            = link_to "Parent Infant Center", "http://www.parentinfantcenter.org/about"
+            , 4205 Spruce Street, (215) 222-5480
+
+          %li
+            = link_to "The Caring Center", "http://www.thecaringcenter.org"
+            , 3010 Spring Garden Street, (215) 386-8245
+
+          %li
+            = link_to "Bright Horizons", "https://www.brighthorizons.com"
+            , 1700 Benjamin Franklin Parkway, (215) 981-5450
+
+          %li
+            = link_to "Infant Friendship Center", "http://melc.org/locations/infant-friendship-center/"
+            , 1001 South 45th Street, (215) 386-5097
+
+          %li
+            = link_to "Kindercare Learning Center", "http://www.kindercare.com"
+            , 1700 Market Street, (215) 563-9499
+
+          %li
+            = link_to "Petite Ecole Bilingue", "http://frenchcommunicationinstitute.org/about-school.shtml"
+            , 2133 Arch Street, (215) 568-1158
+
+          %li
+            = link_to "St. Mary's Nursery School", "https://stmarysnursery.org"
+            , 3916 Locust Walk, (215) 386-0321
+
+          %li
+            = link_to "Tenth Presbyterian Church Preschool", "http://tenthpreschool.org"
+            , 1701 Delancey Street, (215) 735-7688
+
+%br
+%br

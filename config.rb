@@ -58,7 +58,7 @@ configure :development do
   activate :automatic_image_sizes
 
   # Reload the browser automatically whenever files change
-  activate :livereload,  :no_swf => true
+  activate :livereload,  :no_swf => true, :host => '0.0.0.0'
 
   # Haml Configuration
   # Disable Haml warnings

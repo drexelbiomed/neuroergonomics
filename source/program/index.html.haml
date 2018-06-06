@@ -9,16 +9,39 @@ title: 'Program'
 %p The conference program will span for three days (June 27th, 28th and 29th) featuring three keynote speakers, multiple invited talks from experts around the world and technical sessions. The program agenda will soon be available. In the meantime, please <a href="../submissions">submit your contributions</a> and <a href="../attending">register</a> for the conference.
 %p.text-center
   %a.btn.btn-lg.btn-link{:href => prefix + "program/Neuroergonomics2018ConferencePrelimProgram.pdf"} View Preliminary Program  &rarr;
+  %br
+  %span{style: "color: #666666;"} Last updated May 26, 2018
 %br
 %br
 
-/ %h3.h3.text-center
-/   %span Schedule Overview
-/ %a{:href => prefix + "assets/images/ScheduleOverview_Version3.png"}
-/   = image_tag "ScheduleOverview_Version3.png", alt: "Schedule Overview V3", class: "img-fluid"
+.accordion
+  .card
+    .card-header.bg-light#headingOne
+      %h5.mb-0
+        %button.btn.btn-link{"data-toggle" => "collapse", "data-target" => "#collapseOne", "aria-expanded"=>"true", "aria-controls"=>"collapseOne"}
+          %strong Poster Presentations
+    #collapseOne.collapse{"aria-labelledby"=>"headingOne", "data-parent"=>"#accordion"}
+      .card-body
+        %p Poster sessions are a valuable method for authors to present studies and meet with interested attendees for in-depth technical discussions. A poster session is a graphic presentation of an author's research. Authors illustrate their study findings by displaying graphs, photos, diagrams, and a small amount of text on poster boards.
+        %p All posters will be hanged to prearranged poster boards in the morning of the day that they are assigned to. And posters will be in display all day until the evening if the day they are assigned. Clips will be provided to attach your posters to the boards. Specific board locations are assigned for each poster and this will be listed in the conference program.
+        %p
+          %strong Dimensions
+        %p The poster boards are 36 inches high x 48 inches long in landscape orientation (long dimension is horizontal).
+        %p
+          %strong Format
+        %ul
+          %li Your poster should cover the key points of your work. The ideal poster is designed to attract attention, provide a brief overview of your work and initiate discussion &questions.
+          %li The title of your poster should appear at the top in CAPITAL letters about 25mm (1”) high.
+          %li The author(s) name(s) and affiliation(s) are put below the title.
+          %li Use color to highlight and make your poster more attractive, by using pictures, diagrams, cartoons, figures, etc., rather than only text wherever possible
+          %li The smallest text on your poster should be at least 9mm (3/8″) high, and the important points should be in a larger font. Make your poster as self-explanatory as possible. This will save you time to use for discussions and questions.
 
-/ %hr
+        %p
+          %strong Poster Printing
+        %p Presenting authors should print their physical poster based on the requirements listed above. Neuroergonomics conference does not print posters on behalf of presenters.
 
+%br
+%br
 %h2.h2.text-center
   %span Satellite Events
 %p 2nd International Neuroergonomics Conference will include a Neuroengineering symposium and multiple workshops on June 27<sup>th</sup>.

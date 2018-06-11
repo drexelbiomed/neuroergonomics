@@ -1,0 +1,11 @@
+---
+category: 'Program'
+title: 'Posters'
+---
+
+%h1.h1.text-center
+  %span= current_resource.data.title
+
+= partial "partials/cards/posters"
+
+= partial("partials/back-to", locals: { :location_title => "Program", :location => "./" })

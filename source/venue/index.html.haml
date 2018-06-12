@@ -5,25 +5,43 @@ title: 'Venue'
 
 %h1.h1.text-center
   %span= current_resource.data.title
-
-= image_tag "behrakis-grand-hall-outside.jpg", :class => "img-fluid"
-%br
-%br
-%p The conference will take place at <strong>Behrakis Grand Hall located within the Creese Student Center on the campus of Drexel University</strong>. Behrakis Grand Hall is conveniently situated within University City, within blocks of two accessible subway stations, a large train station, multiple bus routes, and highway. If you choose to stay within Philadelphia for the conference, there are multiple hotels within a 10-minute walk of campus, many restaurants, and a 24-hour public safety force.
-
 %p
-  %strong Address
-  %br
-  Behrakis Grand Hall
-  %br
-  Drexel University
-  %br
-  3210 Chestnut Street
-  %br
-  Philadelphia, PA 19104
-  %br
-  United States
-.embed-responsive.embed-responsive-16by9
+  The conference will take place at
+  %strong Bossone Research Enterprise Center
+  and
+  %strong Behrakis Grand Hall
+  located on Drexel University campus within University City Philadelphia. If you choose to stay within Philadelphia for the conference, there are multiple hotels within a 10-minute walk of campus, many restaurants, and a 24-hour public safety force.
+
+.row
+  .col-md-6
+    %h2.h2{:style => "font-size: 20px;"} 1. Bossone Research Enterprise Center
+    %p
+      3140 Market Street
+      %br
+      Philadelphia, PA 19104
+      %br
+      United States
+  .col-md-6
+    .text-center
+      = image_tag "bossone-research-center-outside.jpg", :class => "img-fluid"
+.embed-responsive.embed-responsive-4by3
+  %iframe{:src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.3922122252416!2d-75.18853608438783!3d39.95498289151549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c64efeb4bc19%3A0x461ff0b62f51eea0!2s3140+Market+St%2C+Philadelphia%2C+PA+19104!5e0!3m2!1sen!2sus!4v1528820234498", :frameborder => "0", :style => "border: 0;", :allowfullscreen => ""}
+%br
+%br
+%hr
+.row
+  .col-md-6
+    %h2.h2{:style => "font-size: 20px;"} 2. Behrakis Grand Hall
+    %p
+      3210 Chestnut Street
+      %br
+      Philadelphia, PA 19104
+      %br
+      United States
+  .col-md-6
+    .text-center
+      = image_tag "behrakis-grand-hall-outside.jpg", :class => "img-fluid"
+.embed-responsive.embed-responsive-4by3
   %iframe{:src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.456257663197!2d-75.19064214898458!3d39.95355069150111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c64fea2ac227%3A0xed5aac265c261f22!2s3210+Chestnut+St%2C+Philadelphia%2C+PA+19104!5e0!3m2!1sen!2sus!4v1516749738985", :frameborder => "0"}
 %br
 %br
@@ -72,20 +90,20 @@ title: 'Venue'
 %hr
 %p Philadelphia can be easily accessed within the North-East corridor by bus and by rail. Whether as the primary mode of transportation or as an interconnecting transit, various bus service providers provide useful and frequent services to Philadelphia and the surrounding areas.
 %p Amtrak rail service is the main passenger railway service in the US and serves Philadelphia primarily through 30th street station in University City. Tickets can be purchased online at Amtrak.com and should be purchased at least 21 days in advance in order to secure reasonable prices. Amtrak can provide many regional services to major east-coast cities such as Washington DC, Baltimore, Wilmington, Trenton, Newark, New York City, Boston, Pittsburgh and other areas.
-%a.btn.btn-outline-info{:href => "http://www.amtrak.com"} More info: Amtrak
-%br
+%p
+  %a.btn.btn-outline-info{:href => "http://www.amtrak.com"} More info: Amtrak
+
 %br
 %p Greyhound is one of the major bus services with the largest variety of service locations. In Philadelphia, Greyhound operates out of the Greyhound terminal located at 11th and Arch Street. Bus services can be very affordable when purchased in advance and serve numerous locations.
-%a.btn.btn-outline-info{:href => "http://www.greyhound.com"} More info: Greyhound
+%p
+  %a.btn.btn-outline-info{:href => "http://www.greyhound.com"} More info: Greyhound
 %br
-%br
+
 %p Megabus and Bolt bus both offer discount fairs from Philadelphia to other major cities in the region. Tickets purchased in advance can be quite cheap, but may offer other inconveniences in terms of their locations, transfers and the times offered.
-%a.btn.btn-outline-info{:href => "http://www.megabus.com"} More info: Megabus
-%br
-%a.btn.btn-outline-info{:href => "http://www.boltbus.com"} More info: Bolt Bus
-
-
-%br
+%p
+  %a.btn.btn-outline-info{:href => "http://www.megabus.com"} More info: Megabus
+%p
+  %a.btn.btn-outline-info{:href => "http://www.boltbus.com"} More info: Bolt Bus
 %br
 
 %hr
@@ -151,68 +169,69 @@ title: 'Venue'
 %h3.h3 Things to do
 %p Founded in 1682, Philadelphia is a city rich in history, innovation, and culture. The city holds a particular fame for its role in the American Revolution, being the meeting area and site for the signing of the Declaration of Independence in 1776 as well as the Constitution in 1787. Prior to Washington, DC, Philadelphia served as the nations capital, eventually evolving from a primarily industrial city into an important economic, medical, and educational epicenter. Take your spare time from the convention to get out, see and experience the City of Brotherly Love!
 %h4.h4 Museums and History
-%table.table.table-striped
-  %thead
-    %tr
-      %th Name
-      %th Known For
-      %th Website
-  %tbody
-    %tr
-      %th{:scope => "row"}Philadelphia Museum of Art
-      %td Iconic museum located on the parkway featuring fine art, sculpture, armor, drawings, and of course the Rocky Statue
-      %td
-        %a{:href => "http://www.philamuseum.org"} www.philamuseum.org
-    %tr
-      %th{:scope => "row"}Barnes Foundation
-      %td Impressionism, Modernist Art collection
-      %td
-        %a{:href => "http://www.barnesfoundation.org"} www.barnesfoundation.org
-    %tr
-      %th{:scope => "row"}Academy of Natural Sciences
-      %td Oldest natural science research institution in America featuring prominent Dinosaur collections
-      %td
-        %a{:href => "http://www.ansp.org"} www.ansp.org
-    %tr
-      %th{:scope => "row"}Franklin Institute
-      %td Science Education museum with exhibits on the Physics, Space, Neuroscience, Trains and more
-      %td
-        %a{:href => "http://www.fi.edu"} www.fi.edu
-    %tr
-      %th{:scope => "row"}Penn Museum
-      %td Museum of archaeology and anthropology with vast collections of ancient Mediterranean and Mesopotamian cultures
-      %td
-        %a{:href => "http://www.penn.museum"} www.penn.museum
-    %tr
-      %th{:scope => "row"}Mütter Museum
-      %td Medical museum of anatomical oddities and ancient medical equipment. Located at the College of Physicians of Philadelphia
-      %td
-        %a{:href => "http://muttermuseum.org"} muttermuseum.org
-    %tr
-      %th{:scope => "row"}Rodin Museum
-      %td A branch of the art museum containing the largest collection of Rodin’s sculptures including “The Thinker”
-      %td
-        %a{:href => "http://www.rodinmuseum.org"} www.rodinmuseum.org
-    %tr
-      %th{:scope => "row"}Pennsylvania Academy of the Fine Arts
-      %td Museum and art school, known for its collections of 19th and 20th century American works
-      %td
-        %a{:href => "http://www.pafa.org"} www.pafa.org
-    %tr
-      %th{:scope => "row"}National Constitution Center
-      %td Interactive museum dedicated to the US constitution
-      %td
-        %a{:href => "http://constitutioncenter.org "} constitutioncenter.org
-    %tr
-      %th{:scope => "row"}Independence Hall
-      %td Site of the signing of the Declaration of Independence and the Constitution, located across the street from the Liberty Bell
-      %td
-        %a{:href => "https://www.nps.gov/inde/"} www.nps.gov/inde
-    %tr
-      %th{:scope => "row"}Eastern State Penitentiary
-      %td Former prison in which Al Capone was once held with guided tours.
-      %td
-        %a{:href => "http://www.easternstate.org"} www.easternstate.org
+.table-responsive
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Known For
+        %th Website
+    %tbody
+      %tr
+        %th{:scope => "row"}Philadelphia Museum of Art
+        %td Iconic museum located on the parkway featuring fine art, sculpture, armor, drawings, and of course the Rocky Statue
+        %td
+          %a{:href => "http://www.philamuseum.org"} www.philamuseum.org
+      %tr
+        %th{:scope => "row"}Barnes Foundation
+        %td Impressionism, Modernist Art collection
+        %td
+          %a{:href => "http://www.barnesfoundation.org"} www.barnesfoundation.org
+      %tr
+        %th{:scope => "row"}Academy of Natural Sciences
+        %td Oldest natural science research institution in America featuring prominent Dinosaur collections
+        %td
+          %a{:href => "http://www.ansp.org"} www.ansp.org
+      %tr
+        %th{:scope => "row"}Franklin Institute
+        %td Science Education museum with exhibits on the Physics, Space, Neuroscience, Trains and more
+        %td
+          %a{:href => "http://www.fi.edu"} www.fi.edu
+      %tr
+        %th{:scope => "row"}Penn Museum
+        %td Museum of archaeology and anthropology with vast collections of ancient Mediterranean and Mesopotamian cultures
+        %td
+          %a{:href => "http://www.penn.museum"} www.penn.museum
+      %tr
+        %th{:scope => "row"}Mütter Museum
+        %td Medical museum of anatomical oddities and ancient medical equipment. Located at the College of Physicians of Philadelphia
+        %td
+          %a{:href => "http://muttermuseum.org"} muttermuseum.org
+      %tr
+        %th{:scope => "row"}Rodin Museum
+        %td A branch of the art museum containing the largest collection of Rodin’s sculptures including “The Thinker”
+        %td
+          %a{:href => "http://www.rodinmuseum.org"} www.rodinmuseum.org
+      %tr
+        %th{:scope => "row"}Pennsylvania Academy of the Fine Arts
+        %td Museum and art school, known for its collections of 19th and 20th century American works
+        %td
+          %a{:href => "http://www.pafa.org"} www.pafa.org
+      %tr
+        %th{:scope => "row"}National Constitution Center
+        %td Interactive museum dedicated to the US constitution
+        %td
+          %a{:href => "http://constitutioncenter.org "} constitutioncenter.org
+      %tr
+        %th{:scope => "row"}Independence Hall
+        %td Site of the signing of the Declaration of Independence and the Constitution, located across the street from the Liberty Bell
+        %td
+          %a{:href => "https://www.nps.gov/inde/"} www.nps.gov/inde
+      %tr
+        %th{:scope => "row"}Eastern State Penitentiary
+        %td Former prison in which Al Capone was once held with guided tours.
+        %td
+          %a{:href => "http://www.easternstate.org"} www.easternstate.org
 
 %h4.h4 Music and Theatre
 %ul

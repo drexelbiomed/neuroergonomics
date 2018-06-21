@@ -29,12 +29,15 @@
         = link_to "Visit Website", "http://brainproducts.com", :class => "card-link btn btn-outline-primary"
   .card-deck.diamond
     .card
+      = image_tag "NGC-logo.jpg", :class=> "card-img-top", :alt => "Northrop Grumman", :style => "max-width: 15rem;"
+      .card-body
+        %p.card-text Northrop Grumman
+        = link_to "Visit Website", "http://www.northropgrumman.com", :class => "card-link btn btn-outline-primary"
     .card
-      = image_tag "fNIR-devices-logo.png", :class=> "card-img-top", :alt => "fNIR Devices", :style => "max-width: 15rem;"
+      = image_tag "fNIR-devices-logo.png", :class=> "card-img-top", :alt => "fNIR Devices", :style => "max-width: 12rem;"
       .card-body
         %p.card-text fNIR Devices
         = link_to "Visit Website", "http://www.fnirdevices.com", :class => "card-link btn btn-outline-primary"
-    .card
 
   %br
 
@@ -93,11 +96,16 @@
           = link_to "Visit Website", "https://ant-neuro.com", :class => "card-link btn btn-outline-primary"
   .card-deck.gold
     .card
-    .card
       = image_tag "neuroelectrics_logo.png", :class=> "card-img-top", :alt => "Neuroelectrics", :style => "width: 200px;"
       .card-body
         %p.card-text
           = link_to "Visit Website", "http://neuroelectrics.com", :class => "card-link btn btn-outline-primary"
     .card
+      = image_tag "MindStaq-Logo.jpg", :class=> "card-img-top", :alt => "MindStaq", :style => "width: 200px;"
+      .card-body
+        %p.card-text
+          MindStaq
+          %br
+          = link_to "Visit Website", "https://mindstaq.com", :class => "card-link btn btn-outline-primary"
 %br
 %br

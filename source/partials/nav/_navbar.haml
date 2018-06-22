@@ -1,7 +1,7 @@
 %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.rounded-top{:role => "navigation"}
   %button.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => "#navbarSupportedContent", "aria-controls" => "navbarSupportedContent", "aria-expanded" => false, "aria-label" => "Toggle navigation"}
     %span.navbar-toggler-icon
-  .collapse.navbar-collapse.nav-tabs#navbarSupportedContent
+  .collapse.navbar-collapse.nav-tabs#navbarSupportedContent.show
     %ul.navbar-nav.mr-auto{:role => "presentation"}
       %li.nav-item.dropdown
         - if current_resource.data.category == "Home"

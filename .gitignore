@@ -5,3 +5,7 @@ build/*
 
 # Ignore these files
 *.psd
+*.ai
+*.pdf
+
+.DS_Store
